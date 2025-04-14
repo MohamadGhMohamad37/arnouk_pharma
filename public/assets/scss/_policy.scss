@@ -1,0 +1,35 @@
+/* policy section - start
+==================================================================================================== */
+
+/* policy default - start
+================================================== */
+.policy-default {
+	margin-top: 40px;
+	padding: 0px 20px;
+	position: relative;
+	.item-icon {
+		float: left;
+		width: 60px;
+		height: 60px;
+		color: #5f6680;
+		font-size: 30px;
+		margin: 14px 0px;
+		line-height: 62px;
+		margin-right: 30px;
+		text-align: center;
+		border-radius: 100%;
+		border: 1px dashed $royal-blue;
+	}
+	.item-content {
+		display: table;
+	}
+	.item-title {
+		font-size: 18px;
+		margin-bottom: 15px;
+	}
+}
+/* policy default - end
+================================================== */
+
+/* policy section - end
+==================================================================================================== */

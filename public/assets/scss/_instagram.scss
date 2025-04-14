@@ -1,0 +1,77 @@
+/* instagram section - start
+==================================================================================================== */
+.instagram-section {
+	.wrapper {
+		padding-left: 75px;
+		padding-right: 75px;
+	}
+}
+
+.instagram-shoot {
+	display: block;
+	overflow: hidden;
+	max-width: 267px;
+	position: relative;
+	margin: 30px auto 0px;
+	&:before {
+		top: 0px;
+		left: 0px;
+		right: 0px;
+		bottom: 0px;
+		content: '';
+		opacity: 0;
+		position: absolute;
+		transition: $default-transition;
+		background-color: rgba(54, 65, 90, 0.851);
+	}
+	.instagram-icon {
+		top: 50%;
+		left: 50%;
+		z-index: 2;
+		width: 50px;
+		height: 50px;
+		font-size: 21px;
+		overflow: hidden;
+		line-height: 56px;
+		text-align: center;
+		position: absolute;
+		color: $royal-blue;
+		transform: translate(-50%, -50%);
+		&:before {
+			top: 0px;
+			left: 50%;
+			width: 0px;
+			bottom: 0px;
+			content: '';
+			z-index: -1;
+			opacity: 0;
+			position: absolute;
+			background-color: #ffffff;
+			transform: translateX(-50%);
+			transition: 0.4s cubic-bezier(0.33, 1, 0.68, 1);
+		}
+		i {
+			transform: translateY(200%);
+			transition: 0.4s cubic-bezier(0.33, 1, 0.68, 1);
+		}
+	}
+
+	&:hover {
+		&:before {
+			opacity: 1;
+		}
+		.instagram-icon {
+			&:before {
+				opacity: 1;
+				width: 100%;
+				transition-delay: .1s;
+			}
+			i {
+				transition-delay: .3s;
+				transform: translateY(0px);
+			}
+		}
+	}
+}
+/* instagram section - end
+==================================================================================================== */

@@ -1,0 +1,95 @@
+/* promotion sections - start
+==================================================================================================== */
+
+/* promotion section settings - start
+================================================== */
+.promotion-section {
+	.pill-image-1 {
+		right: -85px;
+		bottom: 300px;
+		max-width: 345px;
+	}
+
+	.masonry-grid {
+		.grid-item,
+		.grid-sizer {
+			width: 33.333%;
+		}
+		.w-66 {
+			width: 66.666%;
+		}
+	}
+}
+/* promotion section settings - end
+================================================== */
+
+
+/* promotion fullimage - start
+================================================== */
+.promotion-fullimage {
+	overflow: hidden;
+	position: relative;
+	.item-image {
+		display: block;
+		overflow: hidden;
+		>img {
+			transition: 0.6s cubic-bezier(0.33, 1, 0.68, 1);
+		}
+	}
+	&:hover {
+		.item-image {
+			>img {
+				transform: scale(1.1);
+			}
+		}
+	}
+
+	.promotion-content {
+		left: 0px;
+		right: 0px;
+		z-index: 2;
+		padding: 40px;
+		position: absolute;
+		small {
+			font-size: 14px;
+		}
+		.item-title {
+			font-size: 30px;
+			font-weight: 500;
+			margin-bottom: 23px;
+			strong {
+				font-weight: 700;
+			}
+			span {
+				font-weight: 400;
+			}
+		}
+
+		&.size-increase {
+			.item-title {
+				font-size: 36px;
+			}
+		}
+		&.size-decrease {
+			.item-title {
+				font-size: 24px;
+			}
+		}
+
+		&.position-top {
+			top: 0px;
+		}
+		&.position-bottom {
+			bottom: 0px;
+		}
+		&.position-vertical-center {
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+}
+/* promotion fullimage - end
+================================================== */
+
+/* promotion sections - end
+==================================================================================================== */

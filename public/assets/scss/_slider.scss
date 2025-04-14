@@ -1,0 +1,120 @@
+/* main slider sections - start
+==================================================================================================== */
+
+.main-carousel {
+	.item {
+		min-height: 100vh;
+		padding-top: 100px;
+		padding-bottom: 100px;
+		&.bg-gray {
+			background-color: #e8ecf1;
+		}
+
+		.slider-content {
+			.post-type {
+				font-size: 16px;
+				margin-bottom: 20px;
+				display: inline-block;
+			}
+			.item-title {
+				font-size: 48px;
+				margin-bottom: 15px;
+			}
+			p {
+				font-size: 16px;
+				max-width: 520px;
+				margin-bottom: 50px;
+				color: $default-black;
+				display: inline-block;
+			}
+
+			.btns-group {
+				>ul {
+					>li {
+						margin-right: 20px;
+						&:last-child {
+							margin-right: 0px !important;
+						}
+					}
+				}
+			}
+			.off-price {
+				font-size: 21px;
+				font-weight: 700;
+				color: $royal-blue;
+				display: inline-block;
+			}
+
+			.animate-item {
+				opacity: 0;
+				transform: translateX(100px);
+				transition: 0.8s cubic-bezier(0.33, 1, 0.68, 1);
+			}
+		}
+
+		.slider-image {
+			opacity: 0;
+			transform: translateX(50px);
+			transition: $default-transition;
+		}
+
+		.meter-image {
+			float: left;
+			width: 595px;
+			margin-left: -30px;
+		}
+		.mask-image {
+			float: left;
+			width: 910px;
+			margin-left: -73px;
+		}
+	}
+
+	.owl-item.active {
+		.item {
+			.slider-content {
+				.animate-item {
+					opacity: 1;
+					transform: translateY(0px);
+					&:nth-child(1) {
+						transition-delay: .4s;
+					}
+					&:nth-child(2) {
+						transition-delay: .6s;
+					}
+					&:nth-child(3) {
+						transition-delay: .8s;
+					}
+					&:nth-child(4) {
+						transition-delay: 1s;
+					}
+				}
+			}
+
+			.slider-image {
+				opacity: 1;
+				transition-delay: 1s;
+				transform: translateX(0px);
+			}
+		}
+	}
+
+	&.arrow-right-left {
+		.owl-prev {
+			left: 60px;
+		}
+		.owl-next {
+			right: 60px;
+		}
+	}
+
+	.owl-dots {
+		left: 50%;
+		bottom: 50px;
+		position: absolute;
+		transform: translateX(-50%);
+	}
+}
+
+/* main slider sections - end
+==================================================================================================== */

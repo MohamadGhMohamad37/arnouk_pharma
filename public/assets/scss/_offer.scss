@@ -1,0 +1,121 @@
+/* offer sections - start
+==================================================================================================== */
+
+/* offer section settings - start
+================================================== */
+.offer-section {
+	&.bg-gray {
+		overflow: hidden;
+		background-color: #f4f8fb;
+	}
+
+	.wrap-1600 {
+		&.bg-gray {
+			overflow: hidden;
+			background-color: #f4f8fb;
+		}
+	}
+
+	.leaf-image-1 {
+		top: 50%;
+		left: -131px;
+		max-width: 264px;
+		transform: translateY(-50%);
+	}
+	.leaf-image-2 {
+		right: -160px;
+		bottom: -101px;
+		max-width: 411px;
+	}
+}
+/* offer section settings - end
+================================================== */
+
+
+/* offer item - start
+================================================== */
+.offer-item {
+	.item-image {
+		margin-bottom: -20px;
+	}
+	.item-image-2 {
+		float: left;
+		width: 785px;
+		margin-left: 45px;
+	}
+
+	.item-content {
+		.sub-title {
+			font-size: 21px;
+			font-weight: 500;
+		}
+		.title-text {
+			font-size: 36px;
+			font-weight: 500;
+		}
+		p {
+			font-size: 16px;
+			color: $default-black;
+		}
+		.info-list {
+			>ul {
+				>li {
+					font-size: 16px;
+					position: relative;
+					padding-left: 45px;
+					margin-bottom: 20px;
+					color: $default-black;
+					&:last-child {
+						margin-bottom: 0px !important;
+					}
+					&:before {
+						top: 3px;
+						left: 0px;
+						line-height: 1;
+						font-size: 21px;
+						content: "\f00c";
+						font-weight: 900;
+						color: $royal-blue;
+						position: absolute;
+						font-family: 'Line Awesome Free';
+					}
+				}
+			}
+		}
+	}
+
+	.countdown-timer {
+		>ul {
+			>li {
+				width: 80px;
+				padding: 15px 10px;
+				text-align: center;
+				margin-right: 20px;
+				background-color: #ffffff;
+				border: 2px dashed $light-green;
+				&:last-child {
+					margin-right: 0px !important;
+				}
+				strong,small {
+					display: block;
+					line-height: 1;
+				}
+				strong {
+					font-size: 24px;
+					font-weight: 500;
+					margin-bottom: 8px;
+					color: $default-black;
+				}
+				small {
+					font-size: 14px;
+					text-transform: capitalize;
+				}
+			}
+		}
+	}
+}
+/* offer item - end
+================================================== */
+
+/* offer sections - end
+==================================================================================================== */

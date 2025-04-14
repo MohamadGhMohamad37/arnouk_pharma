@@ -1,0 +1,129 @@
+/* footer section - start
+==================================================================================================== */
+.footer-section {
+	overflow: hidden;
+	position: relative;
+	&.bg-gray {
+		background-color: #f4f8fb;
+	}
+
+	.widget-title {
+		font-size: 21px;
+		font-weight: 500;
+		margin-bottom: 20px;
+	}
+
+	.btns-group {
+		&.ul-li-block {
+			>ul {
+				>li {
+					margin-bottom: 15px;
+					&:last-child {
+						margin-bottom: 0px !important;
+					}
+				}
+			}
+		}
+	}
+
+	.brand-logo {
+		.brand-link {
+			max-width: 110px;
+		}
+	}
+
+	.about-content {
+		padding-right: 68px;
+	}
+
+	.contact-info {
+		>ul {
+			>li {
+				margin-bottom: 20px;
+				&:last-child {
+					margin-bottom: 0px !important;
+				}
+				>span {
+					width: 40px;
+					float: left;
+					line-height: 1;
+					font-size: 24px;
+					color: $royal-blue;
+				}
+				>a {
+					display: table;
+					color: #5f6680;
+					font-weight: 500;
+					line-height: 1.714;
+					&:hover {
+						color: $royal-blue;
+					}
+				}
+			}
+		}
+	}
+
+	.useful-links {
+		>ul {
+			>li {
+				margin-bottom: 15px;
+				&:last-child {
+					margin-bottom: 0px !important;
+				}
+				>a {
+					color: $default-color;
+					&:hover {
+						color: $royal-blue;
+					}
+				}
+			}
+		}
+	}
+
+	.payment-cards {
+		p {
+			>a {
+				font-weight: 500;
+				color: $royal-blue;
+			}
+		}
+		>ul {
+			>li {
+				margin-right: 5px;
+				&:last-child {
+					margin-right: 0px !important;
+				}
+				>a {
+					display: block;
+					line-height: 1;
+				}
+			}
+		}
+	}
+
+	.footer-bottom {
+		position: relative;
+		padding: 33.5px 0px;
+		.pill-image-1 {
+			bottom: -15px;
+			right: -105px;
+			max-width: 345px;
+			position: absolute;
+		}
+		&.bg-gray {
+			background-color: #f4f8fb;
+		}
+		p {
+			a {
+				color: #5f6680;
+				font-weight: 500;
+				&:hover {
+					color: $royal-blue;
+				}
+			}
+		}
+	}
+
+}
+/* footer section - end
+==================================================================================================== */

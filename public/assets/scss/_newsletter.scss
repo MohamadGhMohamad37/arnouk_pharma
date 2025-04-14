@@ -1,0 +1,68 @@
+/* newsletter section - start
+==================================================================================================== */
+.newsletter-section {
+	.pill-image-1 {
+		top: 70px;
+		left: -150px;
+		max-width: 345px;
+	}
+
+	.newsletter-boxed {
+		padding: 100px;
+		border-radius: 3px;
+		&.bg-gray {
+			background-color: #f4f8fb;
+			border: 1px solid #e2e4f4;
+		}
+
+		.form-item {
+			max-width: 500px;
+			padding-right: 70px;
+			margin: 0px auto 30px;
+			input {
+				height: 65px;
+				padding: 0px 30px;
+			}
+			button {
+				top: 50%;
+				right: 0px;
+				position: absolute;
+				transform: translateY(-50%);
+			}
+		}
+
+		.checkbox-btn {
+			display: table;
+			margin: 0px auto;
+		}
+
+		&.small-content {
+			padding: 46px 80px;
+			.section-title {
+				margin-bottom: 20px;
+				.title-text {
+					font-size: 24px;
+					margin-bottom: 10px;
+				}
+				p {
+					font-size: 15px;
+				}
+			}
+
+			.form-item {
+				margin-bottom: 20px;
+				input {
+					height: 60px;
+					padding: 0px 25px;
+				}
+				.btn {
+					padding: 20px 30px;
+					padding-bottom: 18px;
+				}
+			}
+		}
+	}
+}
+
+/* newsletter section - end
+==================================================================================================== */

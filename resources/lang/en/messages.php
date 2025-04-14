@@ -1,0 +1,22 @@
+<?php 
+return[
+    'arnouk_pharmacy'=>'Pharmacy',
+    'arnoulk_distribution'=>'for pharmaceutical Distribution',
+    'green_pharma'=>'Green Pharma',
+    'arnoulk_labs_distribution'=>'labs for pharmaceutical industry',
+    'ctl'=>'ctl',
+    'about'=>'about',
+    'serviec'=>'serviec',
+    'product'=>'product',
+    'event'=>'event',
+    'blog'=>'blog',
+    'contact'=>'contact',
+    'job'=>'job',
+    'Sign in to continue to'=>'Sign in to continue to',
+    'arnouk_pharma'=>'Arnouk Pharma',
+    'email'=>'email',
+    'Password'=>'Password',
+    'Remember me'=>'Remember me',
+    'Forgot your password'=>'Forgot your password',
+    'Log in'=>'Log in',
+];

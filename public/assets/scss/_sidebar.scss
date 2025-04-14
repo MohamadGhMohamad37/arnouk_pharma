@@ -1,0 +1,205 @@
+/* sidebar section - start
+==================================================================================================== */
+.sidebar-section {
+
+	.widget {
+		position: relative;
+		margin-bottom: 50px;
+		&:last-child {
+			margin-bottom: 0px !important;
+		}
+	}
+
+	.widget-title {
+		font-size: 21px;
+		font-weight: 500;
+		padding-left: 18px;
+		position: relative;
+		margin-bottom: 30px;
+		padding-bottom: 15px;
+		border-bottom: 1px solid #e2e4f4;
+		&:before {
+			top: 4px;
+			left: 0px;
+			width: 2px;
+			content: '';
+			height: 15px;
+			position: absolute;
+			background-color: $royal-blue;
+		}
+	}
+
+	.sidebar-search {
+		input {
+			width: 100%;
+			height: 55px;
+			outline: none;
+			padding: 0px 25px;
+			background-color: #f4f8fb;
+			border: 1px solid #e2e4f4;
+			transition: $default-transition;
+			&:focus {
+				border-color: $royal-blue;
+			}
+		}
+		button[type=submit] {
+			top: 50%;
+			right: 20px;
+			line-height: 1;
+			font-size: 21px;
+			position: absolute;
+			color: $royal-blue;
+			transform: translateY(-50%);
+		}
+	}
+
+	.products-category,
+	.brand-products {
+		>ul {
+			>li {
+				margin-bottom: 15px;
+				&:last-child {
+					margin-bottom: 0px !important;
+				}
+				>a {
+					color: $default-color;
+					&:hover {
+						color: $royal-blue;
+					}
+				}
+			}
+		}
+	}
+
+	.price-range-area {
+		.slider-range {
+			height: 6px;
+			border: none;
+			border-radius: 45px;
+			background-color: #d6d6d6;
+		}
+		.ui-slider-range {
+			border: none;
+			border-radius: 45px;
+			background-color: $royal-blue;
+		}
+		.ui-state-default {
+			top: -7px;
+			width: 20px;
+			height: 20px;
+			border: none;
+			outline: none;
+			border-radius: 100%;
+			border: 6px solid #ffffff;
+			background-color: $royal-blue;
+			box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
+		}
+		.price-text {
+			font-size: 14px;
+			font-weight: 500;
+			margin-top: 25px;
+			span {
+				float: left;
+				margin-right: 15px;
+			}
+			input {
+				border: none;
+				font-weight: 500;
+				display: inline-block;
+			}
+		}
+	}
+
+	.sidebar-deals-carousel {
+		.owl-nav {
+			.owl-next,
+			.owl-prev {
+				width: 35px;
+				height: 35px;
+				border-radius: 3px;
+				&:before {
+					border: none;
+					font-size: 14px;
+					line-height: 37px;
+					color: $royal-blue;
+					border-radius: 3px;
+					background-color: #ffffff;
+				}
+				&:hover {
+					box-shadow: none;
+					&:before {
+						color: #ffffff;
+						border-color: $royal-blue;
+						background-color: $royal-blue;
+					}
+				}
+			}
+			.owl-prev {
+				left: 0px;
+			}
+			.owl-next {
+				right: 0px;
+			}
+		}
+	}
+
+	.tag-list {
+		>ul {
+			margin: -3px;
+			>li {
+				padding: 3px;
+				>a {
+					width: auto;
+					display: block;
+					line-height: 1;
+					border-radius: 3px;
+					padding: 11px 20px;
+					padding-bottom: 8px;
+					color: $default-color;
+					border: 1px solid #e2e4f4;
+					&:hover {
+						color: #ffffff;
+						border-color: $royal-blue;
+						background-color: $royal-blue;
+					}
+				}
+			}
+		}
+	}
+
+	.recent-post {
+		>ul {
+			>li {
+				margin-bottom: 30px;
+				&:last-child {
+					margin-bottom: 0px !important;
+				}
+			}
+		}
+	}
+
+	.instagram-shoots {
+		>ul {
+			width: auto;
+			display: block;
+			margin: -7.5px;
+			>li {
+				width: 33.333%;
+				padding: 7.5px;
+			}
+		}
+
+		.instagram-shoot {
+			margin: 0px;
+			.instagram-icon {
+				width: 40px;
+				height: 40px;
+				font-size: 18px;
+				line-height: 46px;
+			}
+		}
+	}
+
+}
+/* sidebar section - end
+==================================================================================================== */
