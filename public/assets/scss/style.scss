@@ -1,40 +1,46 @@
-/* table of content - start
-====================================================================================================
+// Global
+@import "global/vars";
+@import "global/mixins";
+@import "global/global";
 
-Project Name 	:  ----------
-File 			:  CSS Base
-Version 		:  1.0.0
-Last change 	:  -- ----- ----
-Author 			:  ----------
-Developer:		:  Rakibul Islam Dewan
+// Layout
+@import "layout/helpers";
+@import "layout/bg-colors";
+@import "layout/typography";
+@import "layout/pagetitle";
+@import "layout/buttons";
+@import "layout/forms";
+@import "layout/tabs";
+@import "layout/icons";
+@import "layout/breadcrumb";
+@import "layout/pagination";
+@import "layout/lists";
+@import "layout/animation";
+@import "layout/alerts";
+@import "layout/carousel";
+@import "layout/preloader";
 
-==================================================
-
-- table of content - end
-==================================================================================================== */
-
-@import "variable";
-@import "reset";
-
-@import "header";
-@import "footer";
-@import "breadcrumb";
-@import "sidebar";
-@import "promotion";
-@import "offer";
-@import "policy";
-@import "newsletter";
-@import "brand";
-@import "instagram";
-
-@import "about";
-@import "blog";
-@import "shop";
-@import "details";
-@import "cart";
-@import "contact";
-
-@import "slider";
-@import "home";
-
-@import "responsive";
+// Modules
+@import "module/header";
+@import "module/accordion";
+@import "module/banners";
+@import "module/footer";
+@import "module/cta";
+@import "module/slider";
+@import "module/video";
+@import "module/features";
+@import "module/fancybox";
+@import "module/team";
+@import "module/testimonial";
+@import "module/clients";
+@import "module/blog";
+@import "module/contact";
+@import "module/pricing";
+@import "module/sidebar";
+@import "module/about";
+@import "module/services";
+@import "module/timeline";
+@import "module/gallery";
+@import "module/shop";
+@import "module/work-process";
+@import "module/progress-bars";

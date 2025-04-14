@@ -2,506 +2,1230 @@
 <html lang="en">
 
 	<head>
-
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<meta http-equiv="x-ua-compatible" content="ie=edge">
-
 		<title>@yield('title')</title>
-		<link rel="shortcut icon" href="{{asset('assets/images/logo/favourite_icon.png')}}">
-
-		<!-- css include -->
-		<link rel="stylesheet" type="text/css" href="{{asset('assets/css/bootstrap.min.css')}}">
-		<link rel="stylesheet" type="text/css" href="{{asset('assets/css/line-awesome.min.css')}}">
-		<link rel="stylesheet" type="text/css" href="{{asset('assets/css/owl.carousel.min.css')}}">
-		<link rel="stylesheet" type="text/css" href="{{asset('assets/css/magnific-popup.css')}}">
-		<link rel="stylesheet" type="text/css" href="{{asset('assets/css/jquery-ui.css')}}">
-		<!-- custom - css include -->
-		<link rel="stylesheet" type="text/css" href="{{asset('assets/css/style.css')}}">
-
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<meta name="description" content="Medcity - Medical Healthcare HTML5 Template">
+		<link href="{{asset('assets/images/favicon/favicon.png')}}" rel="icon">	  
+		<link rel="stylesheet"
+		  href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Roboto:wght@400;700&display=swap">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+		<link rel="stylesheet" href="{{asset('assets/css/libraries.css')}}">
+		<link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
 	</head>
 
 
-	<body class="home-v1">
+	<body>
+		<div class="wrapper">
+		  <div class="preloader">
+			<div class="loading"><span></span><span></span><span></span><span></span></div>
+		  </div><!-- /.preloader -->
+	  
+		  <!-- =========================
+			  Header
+		  =========================== -->
+		  <header class="header header-layout2">
+			<div class="header-topbar">
+			  <div class="container-fluid">
+				<div class="row align-items-center">
+				  <div class="col-12">
+					<div class="d-flex align-items-center justify-content-between">
+					  <ul class="contact__list d-flex flex-wrap align-items-center list-unstyled mb-0">
+						<li>
+						  <i class="icon-phone"></i><a href="tel:+5565454117">Emergency Line: (002) 01061245741</a>
+						</li>
+						<li>
+						  <i class="icon-location"></i><a href="#">Location: Brooklyn, New York</a>
+						</li>
+						<li>
+						  <i class="icon-clock"></i><a href="contact-us.html">Mon - Fri: 8:00 am - 7:00 pm</a>
+						</li>
+					  </ul><!-- /.contact__list -->
+					  <div class="d-flex">
+						<ul class="social-icons list-unstyled mb-0 mr-30">
+						  <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+						  <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+						  <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+						</ul><!-- /.social-icons -->
+					  </div>
+					</div>
+				  </div><!-- /.col-12 -->
+				</div><!-- /.row -->
+			  </div><!-- /.container -->
+			</div><!-- /.header-top -->
+			<nav class="navbar navbar-expand-lg sticky-navbar">
+			  <div class="container-fluid">
+				<a class="navbar-brand" href="index.html">
+				  <img src="assets/images/logo/logo-light.png" class="logo-light" alt="logo">
+				  <img src="assets/images/logo/logo-dark.png" class="logo-dark" alt="logo">
+				</a>
+				<button class="navbar-toggler" type="button">
+				  <span class="menu-lines"><span></span></span>
+				</button>
+				<div class="collapse navbar-collapse" id="mainNavigation">
+				  <ul class="navbar-nav ml-auto">
+					<li class="nav__item has-dropdown">
+					  <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link"><img src="{{asset('assets/images/logo/favourite_icon.png')}}" width='34px' alt=""> {{ __('messages.arnouk_pharmacy') }}</a>
+					  <ul class="dropdown-menu">
+						<li class="nav__item">
+						  <a href="" class="nav__item-link">{{ __('messages.about') }}</a>
+						</li><!-- /.nav-item -->
+						<li class="nav__item">
+						  <a href="" class="nav__item-link">{{ __('messages.serviec') }}</a>
+						</li><!-- /.nav-item -->
+						<li class="nav__item">
+						  <a href="" class="nav__item-link">{{ __('messages.product') }}</a>
+						</li><!-- /.nav-item -->
+						<li class="nav__item">
+						  <a href="" class="nav__item-link">{{ __('messages.event') }}</a>
+						</li><!-- /.nav-item -->
+						<li class="nav__item">
+						  <a href="" class="nav__item-link">{{ __('messages.blog') }}</a>
+						</li><!-- /.nav-item -->
+						<li class="nav__item">
+							<a href="" class="nav__item-link">{{ __('messages.contact') }}</a>
+						  </li><!-- /.nav-item -->
+						  <li class="nav__item">
+							<a href="" class="nav__item-link">{{ __('messages.job') }}</a>
+						  </li><!-- /.nav-item -->
+					  </ul><!-- /.dropdown-menu -->
+					</li><!-- /.nav-item -->
+					<li class="nav__item has-dropdown">
+					  <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link"><img src="{{asset('assets/images/logo/favourite_icon.png')}}" width='34px' alt=""> {{ __('messages.arnoulk_distribution') }}</a>
+					  <ul class="dropdown-menu">
+						<li class="nav__item">
+						  <a href="" class="nav__item-link">{{ __('messages.about') }}</a>
+						</li><!-- /.nav-item -->
+						<li class="nav__item">
+						  <a href="" class="nav__item-link">{{ __('messages.serviec') }}</a>
+						</li><!-- /.nav-item -->
+						<li class="nav__item">
+						  <a href="" class="nav__item-link">{{ __('messages.product') }}</a>
+						</li><!-- /.nav-item -->
+						<li class="nav__item">
+						  <a href="" class="nav__item-link">{{ __('messages.event') }}</a>
+						</li><!-- /.nav-item -->
+						<li class="nav__item">
+						  <a href="" class="nav__item-link">{{ __('messages.blog') }}</a>
+						</li><!-- /.nav-item -->
+						<li class="nav__item">
+							<a href="" class="nav__item-link">{{ __('messages.contact') }}</a>
+						  </li><!-- /.nav-item -->
+						  <li class="nav__item">
+							<a href="" class="nav__item-link">{{ __('messages.job') }}</a>
+						  </li><!-- /.nav-item -->
+					  </ul><!-- /.dropdown-menu -->
+					</li><!-- /.nav-item -->
+					<li class="nav__item has-dropdown">
+						<a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link">
+							<img src="{{asset('assets/images/logo/favourite_icon.png')}}" width='34px' alt=""> {{ __('messages.arnoulk_labs_distribution') }}
+						</a>
+					  <ul class="dropdown-menu">
+						<li class="nav__item">
+						  <a href="" class="nav__item-link">{{ __('messages.about') }}</a>
+						</li><!-- /.nav-item -->
+						<li class="nav__item">
+						  <a href="" class="nav__item-link">{{ __('messages.serviec') }}</a>
+						</li><!-- /.nav-item -->
+						<li class="nav__item">
+						  <a href="" class="nav__item-link">{{ __('messages.product') }}</a>
+						</li><!-- /.nav-item -->
+						<li class="nav__item">
+						  <a href="" class="nav__item-link">{{ __('messages.event') }}</a>
+						</li><!-- /.nav-item -->
+						<li class="nav__item">
+						  <a href="" class="nav__item-link">{{ __('messages.blog') }}</a>
+						</li><!-- /.nav-item -->
+						<li class="nav__item">
+							<a href="" class="nav__item-link">{{ __('messages.contact') }}</a>
+						  </li><!-- /.nav-item -->
+						  <li class="nav__item">
+							<a href="" class="nav__item-link">{{ __('messages.job') }}</a>
+						  </li><!-- /.nav-item -->
+					  </ul><!-- /.dropdown-menu -->
+					</li><!-- /.nav-item -->
+					<li class="nav__item has-dropdown">
+						<a href="#!" data-toggle="dropdown" class="dropdown-toggle nav__item-link ">
+							<img src="{{asset('assets/images/logo/ctl.png')}}" width='34px' alt="">
+						</a>
+						<ul class="dropdown-menu">
+							<li class="nav__item"><a href="" class="nav__item-link">{{ __('messages.about') }}</a></li>
+                            <li class="nav__item"><a href="" class="nav__item-link">{{ __('messages.serviec') }}</a></li>
+							<li class="nav__item"><a href="" class="nav__item-link">{{ __('messages.product') }}</a></li>
+                            <li class="nav__item"><a href="" class="nav__item-link">{{ __('messages.event') }}</a></li>
+                            <li class="nav__item"><a href="" class="nav__item-link">{{ __('messages.blog') }}</a></li>
+                            <li class="nav__item"><a href="" class="nav__item-link">{{ __('messages.contact') }}</a></li>
+                            <li class="nav__item"><a href="" class="nav__item-link">{{ __('messages.job') }}</a></li>
+						</ul>
+					</li>
+					<li class="nav__item ">
+						<a class="nav__item-link " href="contact.html" >
+							<img src="{{asset('assets/images/logo/logo.webp')}}" width="34px" alt="">
+						</a>
+					</li>
 
-
-		<!-- backtotop - start -->
-		<div id="thetop"></div>
-		<div id="backtotop">
-			<a href="#" id="scroll">
-				<i class="las la-arrow-up"></i>
-			</a>
-		</div>
-		<!-- backtotop - end -->
-
-		<!-- preloader - start -->
-		<!-- <div id="preloader"></div> -->
-		<!-- preloader - end -->
-
-
-		<!-- header-section - start
-		================================================== -->
-		<header id="header-section" style="background: #fff" class="header-section header-primary sticky-header clearfix">
-			<div class="content-wrap d-flex align-items-center">
+					<div class="dropdown lang-dropdown">
+						<button class="dropdown-toggle lang-dropdown-toggle" id="langDropdown" data-toggle="dropdown">
+						  <img src="assets/images/flags/en.png" alt="en">
+						</button>
+						<div class="dropdown-menu" aria-labelledby="langDropdown">
+						  <a class="dropdown-item" href="#">
+							<img src="assets/images/flags/fr.png" alt="en">
+						  </a>
+						  <a class="dropdown-item" href="#">
+							<img src="assets/images/flags/gr.png" alt="en">
+						  </a>
+						</div>
+					  </div>
+				  </ul>
+				  
+				  
+				  <!-- /.navbar-nav -->
+				  <button class="close-mobile-menu d-block d-lg-none"><i class="fas fa-times"></i></button>
+				</div><!-- /.navbar-collapse -->
+			  </div><!-- /.container -->
+			</nav><!-- /.navabr -->
+		  </header><!-- /.Header -->
+	  
+		  <!-- ============================
+			  Slider
+		  ============================== -->
+		  <section class="slider">
+			<div class="slick-carousel m-slides-0"
+			  data-slick='{"slidesToShow": 1, "arrows": true, "dots": false, "speed": 700,"fade": true,"cssEase": "linear"}'>
+			  <div class="slide-item align-v-h">
+				<div class="bg-img"><img src="assets/images/sliders/2.jpg" alt="slide img"></div>
 				<div class="container">
-					<div class="row align-items-center">
-
-						<div class="col-lg-2 col-md-6 col-sm-6 col-xs-6">
-							<div class="brand-logo clearfix">
-								<a href="index.html" class="brand-link">
-									<img src="{{asset('assets/images/logo/logo.png')}}"alt="logo_not_found">
-								</a>
-
-								<div class="btns-group ul-li-right clearfix">
-									<ul class="clearfix">
-										<li>
-											<button type="button" class="mobile-menu-btn">
-												<i class="las la-bars"></i>
-											</button>
-										</li>
-									</ul>
-								</div>
-							</div>
+				  <div class="row align-items-center">
+					<div class="col-sm-12 col-md-12 col-lg-12 col-xl-7">
+					  <div class="slide__content">
+						<h2 class="slide__title">Caring For The Health And Well Being Of Family.</h2>
+						<p class="slide__desc">The health and well-being of our patients and their health care team will
+						  always be our priority, so we follow the best practices for cleanliness.</p>
+						<div class="d-flex flex-wrap align-items-center">
+						  <a href="appointment.html" class="btn btn__primary btn__rounded mr-30">
+							<span>Find A Doctor</span>
+							<i class="icon-arrow-right"></i>
+						  </a>
+						  <a href="services.html" class="btn btn__white btn__rounded">
+							<span>Our Services</span>
+							<i class="icon-arrow-right"></i>
+						  </a>
 						</div>
-
-						<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
-							<nav class="main-menu ul-li-center clearfix">
-								<ul class="clearfix">
-                                <li class="menu-item-has-child">
-										<a href="#!"><img src="{{asset('assets/images/logo/favourite_icon.png')}}" width='34px' alt=""> {{ __('messages.arnouk_pharmacy') }}</a>
-										<ul class="submenu">
-                                            
-                                        <li><a href="">{{ __('messages.about') }}</a></li>
-                                                    <li><a href="">{{ __('messages.serviec') }}</a></li>
-                                                    <li><a href="">{{ __('messages.product') }}</a></li>
-                                                    <li><a href="">{{ __('messages.event') }}</a></li>
-                                                    <li><a href="">{{ __('messages.blog') }}</a></li>
-                                                    <li><a href="">{{ __('messages.contact') }}</a></li>
-                                                    <li><a href="">{{ __('messages.job') }}</a></li>
-										</ul>
-									</li>
-                                <li class="menu-item-has-child">
-										<a href="#!"><img src="{{asset('assets/images/logo/favourite_icon.png')}}" width='34px' alt=""> {{ __('messages.arnoulk_distribution') }}</a>
-										<ul class="submenu">
-                                            
-                                        <li><a href="">{{ __('messages.about') }}</a></li>
-                                                    <li><a href="">{{ __('messages.serviec') }}</a></li>
-                                                    <li><a href="">{{ __('messages.product') }}</a></li>
-                                                    <li><a href="">{{ __('messages.event') }}</a></li>
-                                                    <li><a href="">{{ __('messages.blog') }}</a></li>
-                                                    <li><a href="">{{ __('messages.contact') }}</a></li>
-                                                    <li><a href="">{{ __('messages.job') }}</a></li>
-										</ul>
-									</li>
-                                    <li class="menu-item-has-child">
-										<a href="#!"><img src="{{asset('assets/images/logo/favourite_icon.png')}}" width='34px' alt=""> {{ __('messages.arnoulk_labs_distribution') }}</a>
-										<div class="mega_menu">
-											<div class="row">
-												<div class="col-lg-3">
-													<div class="useful-links ul-li-block clearfix">
-														<h3 class="list-title">{{ __('messages.company') }}</h3>
-														<ul class="clearfix">
-															<li><a href="#!">{{ __('messages.about') }}</a></li>
-															<li><a href="#!">{{ __('messages.ourclient') }}</a></li>
-															<li><a href="#!">{{ __('messages.international_certificate') }}</a></li>
-															<li><a href="#!">{{ __('messages.company_news') }}</a></li>
-															<li><a href="#!">{{ __('messages.team') }}</a></li>
-														</ul>
-													</div>
-												</div>
-
-												<div class="col-lg-3">
-													<div class="useful-links ul-li-block clearfix">
-														<h3 class="list-title">{{ __('messages.product') }}</h3>
-														<ul class="clearfix">
-															<li><a href="#!">General Medicine</a></li>
-															<li><a href="#!">Diabetes Insulin</a></li>
-															<li><a href="#!">Food Suppliment</a></li>
-															<li><a href="#!">Kids Medecine</a></li>
-															<li><a href="#!">Pregnancy Medicine</a></li>
-															<li><a href="#!">Health and Beauty</a></li>
-															<li><a href="#!">Orthopedic</a></li>
-														</ul>
-													</div>
-												</div>
-
-												<div class="col-lg-3">
-													<div class="useful-links ul-li-block clearfix">
-														<h3 class="list-title">{{ __('messages.company') }}</h3>
-														<ul class="clearfix">
-															<li><a href="#!">{{ __('messages.event') }}</a></li>
-															<li><a href="#!">{{ __('messages.blog') }}</a></li>
-															<li><a href="#!">{{ __('messages.contact') }}</a></li>
-														</ul>
-													</div>
-												</div>
-
-												<div class="col-lg-3">
-													<div class="promotion-fullimage clearfix">
-														<a href="#!" class="item-image">
-															<img src="{{asset('assets/images/logo/indutry.jpg')}}" alt="image_not_found">
-														</a>
-														<div class="promotion-content position-top">
-															<small class="d-block text-white mb-1">{{ __('messages.arnoulk_labs_distribution') }}</small>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</li>
-									<li><a href="contact.html"><img src="{{asset('assets/images/logo/logo.webp')}}" width='34px' alt=""> </a></li>
-										
-                                    <li class="menu-item-has-child">
-										<a href="#!"><img src="{{asset('assets/images/logo/ctl.png')}}" width='34px' alt=""></a>
-										<ul class="submenu">
-                                            
-                                        <li><a href="">{{ __('messages.about') }}</a></li>
-                                                    <li><a href="">{{ __('messages.serviec') }}</a></li>
-                                                    <li><a href="">{{ __('messages.product') }}</a></li>
-                                                    <li><a href="">{{ __('messages.event') }}</a></li>
-                                                    <li><a href="">{{ __('messages.blog') }}</a></li>
-                                                    <li><a href="">{{ __('messages.contact') }}</a></li>
-                                                    <li><a href="">{{ __('messages.job') }}</a></li>
-										</ul>
-									</li>
-								</ul>
-							</nav>
+					  </div><!-- /.slide-content -->
+					</div><!-- /.col-xl-7 -->
+				  </div><!-- /.row -->
+				</div><!-- /.container -->
+			  </div><!-- /.slide-item -->
+			  <div class="slide-item align-v-h">
+				<div class="bg-img"><img src="assets/images/sliders/3.jpg" alt="slide img"></div>
+				<div class="container">
+				  <div class="row align-items-center">
+					<div class="col-sm-12 col-md-12 col-lg-12 col-xl-7">
+					  <div class="slide__content">
+						<h2 class="slide__title">All Aspects Of Medical Practice</h2>
+						<p class="slide__desc">The health and well-being of our patients and their health care team will
+						  always be our priority, so we follow the best practices for cleanliness.</p>
+						<div class="d-flex flex-wrap align-items-center">
+						  <a href="appointment.html" class="btn btn__primary btn__rounded mr-30">
+							<span>Find A Doctor</span>
+							<i class="icon-arrow-right"></i>
+						  </a>
+						  <a href="services.html" class="btn btn__white btn__rounded">
+							<span>Our Services</span>
+							<i class="icon-arrow-right"></i>
+						  </a>
 						</div>
-
-					</div>
-				</div>
-			</div>
-
-			<!-- collapse search - start -->
-			<div class="main-search-collapse collapse" id="main-search-collapse">
-				<div class="main-search-form card">
-					<div class="container">
-						<form action="#">
-							<div class="form-item">
-								<input type="search" name="search" placeholder="Search here...">
-								<button type="submit" class="submit-btn"><i class="la la-search"></i></button>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-			<!-- collapse search - end -->
-		</header>
-        
-		<!-- sidebar mobile menu - start -->
-		<div class="sidebar-menu-wrapper">
-			<div id="sidebar-menu" class="sidebar-menu">
-
-				<span class="close-btn">
-					<i class="las la-times"></i>
-				</span>
-
-				<div class="brand-logo text-center clearfix">
-					<a href="index.html" class="brand-link">
-						<img src="assets/images/logo/logo_3.png" alt="logo_not_found">
-					</a>
-				</div>
-
-				<div class="search-wrap">
-					<form action="#!">
-						<div class="form-item mb-0">
-							<input type="search" name="search" placeholder="Search your Products">
-							<button type="submit"><i class="la la-search"></i></button>
-						</div>
-					</form>
-				</div>
-
-				<div id="mobile-accordion" class="mobile-accordion">
-					<div class="card">
-						<div class="card-header" id="heading-one">
-							<button data-toggle="collapse" data-target="#collapse-one" aria-expanded="false" aria-controls="collapse-one">
-								<i class="las la-shopping-bag"></i> 
-								Cart Item
-								<small>03</small>
-							</button>
-						</div>
-						<div id="collapse-one" class="collapse" aria-labelledby="heading-one" data-parent="#mobile-accordion">
-							<div class="card-body">
-								<div class="cart-items-list ul-li-block clearfix">
-									<ul class="clearfix">
-										<li>
-											<div class="item-image">
-												<img src="assets/images/cart/img_1.png" alt="image_not_found">
-											</div>
-											<div class="item-content">
-												<h4 class="item-title">Digital Thermometer</h4>
-												<span class="item-price">$39.50</span>
-											</div>
-											<button type="button" class="remove-btn"><i class="las la-times"></i></button>
-										</li>
-
-										<li>
-											<div class="item-image">
-												<img src="assets/images/cart/img_2.png" alt="image_not_found">
-											</div>
-											<div class="item-content">
-												<h4 class="item-title">Digital Infrared Thermometer</h4>
-												<span class="item-price">$39.50</span>
-											</div>
-											<button type="button" class="remove-btn"><i class="las la-times"></i></button>
-										</li>
-
-										<li>
-											<div class="item-image">
-												<img src="assets/images/cart/img_3.png" alt="image_not_found">
-											</div>
-											<div class="item-content">
-												<h4 class="item-title">Digital Blood Pressure Machine</h4>
-												<span class="item-price">$39.50</span>
-											</div>
-											<button type="button" class="remove-btn"><i class="las la-times"></i></button>
-										</li>
-									</ul>
-								</div>
-
-								<div class="btns-group ul-li clearfix">
-									<ul class="clearfix">
-										<li><a href="cart.html" class="btn bg-default-black">View Cart</a></li>
-										<li><a href="checkout.html" class="btn bg-royal-blue">Checkout</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="card">
-						<div class="card-header" id="heading-two">
-							<button data-toggle="collapse" data-target="#collapse-two" aria-expanded="false" aria-controls="collapse-two">
-								<i class="las la-bars"></i> 
-								All Categories
-							</button>
-						</div>
-						<div id="collapse-two" class="collapse" aria-labelledby="heading-two" data-parent="#mobile-accordion">
-							<div class="card-body all-categories-list ul-li-block clearfix">
-								<ul class="clearfix">
-									<li><a href="#!"><span><i class="las la-microscope"></i></span> Equipment</a></li>
-									<li><a href="#!"><span><i class="las la-capsules"></i></span> General Medecine</a></li>
-									<li><a href="#!"><span><i class="las la-dna"></i></span> Food Suppliment</a></li>
-									<li><a href="#!"><span><i class="las la-first-aid"></i></span> Pharmacy</a></li>
-									<li><a href="#!"><span><i class="las la-stethoscope"></i></span> Medical Tools</a></li>
-									<li><a href="#!"><span><i class="las la-syringe"></i></span> Surgery Equipment</a></li>
-									<li><a href="#!"><span><i class="las la-brain"></i></span> Neurology</a></li>
-									<li><a href="#!"><span><i class="las la-x-ray"></i></span> Orthopredic</a></li>
-									<li><a href="#!"><span><i class="las la-thermometer"></i></span> Diabetic Medicine</a></li>
-									<li><a href="#!"><span><i class="las la-user-nurse"></i></span> ICU Euipment</a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="menu_list ul-li-block clearfix">
-					<h3 class="widget-title">Menu List</h3>
-
-					<ul class="clearfix">
-						<li class="active dropdown">
-							<a href="#!" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Home</a>
-							<ul class="dropdown-menu">
-								<li><a href="index.html">Home V.1</a></li>
-								<li><a href="index-2.html">Home V.2</a></li>
-							</ul>
-						</li>
-						<li><a href="about.html">About</a></li>
-						<li class="dropdown">
-							<a href="#!" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shop</a>
-							<ul class="dropdown-menu">
-								<li class="dropdown">
-									<a href="#!" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shop Grid</a>
-									<ul class="dropdown-menu">
-										<li><a href="shop-grid-2-column.html">Grid 2 Column</a></li>
-										<li><a href="shop-grid-3-column.html">Grid 3 Column</a></li>
-										<li><a href="shop-grid-4-column.html">Grid 4 Column</a></li>
-									</ul>
-								</li>
-								<li><a href="shop-list.html">Shop List</a></li>
-								<li class="dropdown">
-									<a href="#!" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shop Details</a>
-									<ul class="dropdown-menu">
-										<li><a href="shop-details-1.html">Shop Details v1</a></li>
-										<li><a href="shop-details-2.html">Shop Details v2</a></li>
-										<li><a href="shop-details-3.html">Shop Details v3</a></li>
-										<li><a href="shop-details-4.html">Shop Details v4</a></li>
-									</ul>
-								</li>
-								<li><a href="cart.html">Cart Page</a></li>
-								<li><a href="checkout.html">Checkout Page</a></li>
-								<li><a href="wishlist.html">Wishlist Page</a></li>
-							</ul>
-						</li>
-						<li class="dropdown">
-							<a href="#!" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
-							<ul class="dropdown-menu">
-								<li><a href="cart.html">Cart Page</a></li>
-								<li><a href="checkout.html">Checkout Page</a></li>
-								<li><a href="wishlist.html">Wishlist Page</a></li>
-							</ul>
-						</li>
-						<li class="dropdown">
-							<a href="#!" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blog</a>
-							<ul class="dropdown-menu">
-								<li><a href="blog-standard.html">Blog Standard</a></li>
-								<li><a href="blog-masonry.html">Blog Masonry</a></li>
-								<li><a href="blog-details.html">Blog Details</a></li>
-							</ul>
-						</li>
-						<li><a href="contact.html">Contact</a></li>
-					</ul>
-				</div>
-
-				<div class="user-dropdown ul-li-block clearfix">
-					<h3 class="widget-title">User Settings</h3>
-					<ul class="clearfix">
-						<li><a href="#!"><i class="las la-user-circle"></i> Profile</a></li>
-						<li><a href="#!"><i class="las la-user-cog"></i> Settings</a></li>
-						<li><a href="#!"><i class="las la-sign-out-alt"></i> Logout</a></li>
-					</ul>
-				</div>
-
-			</div>
-			<div class="overlay"></div>
-		</div>
-            @yield('content')
-        <!-- footer-section - start
-		================================================== -->
-		<footer id="footer-section" class="footer-section pb-30 clearfix">
+					  </div><!-- /.slide-content -->
+					</div><!-- /.col-xl-7 -->
+				  </div><!-- /.row -->
+				</div><!-- /.container -->
+			  </div><!-- /.slide-item -->
+			</div><!-- /.carousel -->
+		  </section><!-- /.slider -->
+	  
+		  <!-- ========================
+			About Layout 1
+		  =========================== -->
+		  <section class="about-layout1 pb-0">
 			<div class="container">
-
-				<div class="widget-area mb-60 clearfix">
-					<div class="row justify-content-lg-between justify-content-md-center justify-content-md-center">
-
-						<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
-							<div class="about-content">
-								<div class="brand-logo mb-4 clearfix">
-									<a href="index.html" class="brand-link">
-										<img src="assets/images/logo/medicia_2.png" alt="logo_not_found">
-									</a>
-								</div>
-								<p class="mb-30">
-									Medicia is an online medical service and
-									medicinewooCommerce theme for your ultimate
-									online store and medical service.
-								</p>
-								<div class="contact-info ul-li-block clearfix">
-									<ul class="clearfix">
-										<li>
-											<span><i class="las la-map-marked-alt"></i></span>
-											<a href="#!">
-												16122 Collins Street West Victoria 8007 Australia
-											</a>
-										</li>
-										<li>
-											<span><i class="las la-envelope-open-text"></i></span>
-											<a href="#!">
-												yourmail@gmail.com
-											</a>
-										</li>
-										<li>
-											<span><i class="las la-phone-volume"></i></span>
-											<a href="#!">
-												+88022 533 655
-											</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-lg-2 col-md-4 col-sm-12 col-xs-12">
-							<div class="useful-links ul-li-block clearfix">
-								<h3 class="widget-title">Products</h3>
-								<ul class="clearfix">
-									<li><a href="#!">Medicines</a></li>
-									<li><a href="#!">Vitamins & Supplements</a></li>
-									<li><a href="#!">Accessories</a></li>
-									<li><a href="#!">Medical Equipment</a></li>
-									<li><a href="#!">All Products</a></li>
-									<li><a href="#!">Doctor Equipment</a></li>
-									<li><a href="#!">Offer Sale</a></li>
-								</ul>
-							</div>
-						</div>
-
-						<div class="col-lg-2 col-md-4 col-sm-12 col-xs-12">
-							<div class="useful-links ul-li-block clearfix">
-								<h3 class="widget-title">Quick Link</h3>
-								<ul class="clearfix">
-									<li><a href="#!">Support</a></li>
-									<li><a href="#!">Refund Policy</a></li>
-									<li><a href="#!">Shipping & Returns</a></li>
-									<li><a href="#!">Tearms & Condition</a></li>
-									<li><a href="#!">Help Center</a></li>
-								</ul>
-							</div>
-						</div>
-
-						<div class="col-lg-3 col-md-4 col-sm-12 col-xs-12">
-							<div class="payment-cards ul-li mb-30 clearfix">
-								<h3 class="widget-title">Payments</h3>
-								<p class="mb-3">Secure Payments</p>
-								<ul class="mb-3 clearfix">
-									<li><a href="#!"><img src="assets/images/payment_card/card_1.png" alt="_not_found"></a></li>
-									<li><a href="#!"><img src="assets/images/payment_card/card_2.png" alt="_not_found"></a></li>
-									<li><a href="#!"><img src="assets/images/payment_card/card_3.png" alt="_not_found"></a></li>
-									<li><a href="#!"><img src="assets/images/payment_card/card_4.png" alt="_not_found"></a></li>
-									<li><a href="#!"><img src="assets/images/payment_card/card_5.png" alt="_not_found"></a></li>
-								</ul>
-								<p class="mb-0">Powred by <a href="#!">stripe</a></p>
-							</div>
-
-							<div class="social-icon-circle ul-li clearfix">
-								<ul class="clearfix">
-									<li><a href="#!"><i class="lab la-facebook-f"></i></a></li>
-									<li><a href="#!"><i class="lab la-twitter"></i></a></li>
-									<li><a href="#!"><i class="lab la-instagram"></i></a></li>
-									<li><a href="#!"><i class="lab la-pinterest-p"></i></a></li>
-								</ul>
-							</div>
-						</div>
-
+			  <div class="row">
+				<div class="col-sm-12 col-md-12 col-lg-6">
+				  <div class="heading-layout2">
+					<h3 class="heading__title mb-40">Improving The Quality Of Your Life Through Better Health.</h3>
+				  </div><!-- /heading -->
+				</div><!-- /.col-12 -->
+			  </div><!-- /.row -->
+			  <div class="row">
+				<div class="col-sm-12 col-md-12 col-lg-6">
+				  <div class="about__Text">
+					<p class="mb-30">Our goal is to deliver quality of care in a courteous, respectful, and compassionate
+					  manner. We hope you will allow us to care for you and to be the first and best choice for healthcare.
+					</p>
+					<p class="mb-30">We will work with you to develop individualised care plans, including management of
+					  chronic diseases. We are committed to being the region’s premier healthcare network providing patient
+					  centered care that inspires clinical and service excellence.</p>
+					<div class="d-flex align-items-center mb-30">
+					  <a href="doctors-grid.html" class="btn btn__primary btn__outlined btn__rounded mr-30">
+						Meet Our Doctors</a>
+					  <img src="assets/images/about/singnture.png" alt="singnture">
 					</div>
-				</div>
-
-				<div class="footer-bottom bg-gray text-center clearfix">
-					<p class="mb-0">©Copyright 2020 <a href="#!">Marvel_Theme</a>. All Rights Reserved.</p>
-					<span class="decoration-image pill-image-1">
-						<img src="assets/images/decoration/pill_3.png" alt="pill_image_not_found">
-					</span>
-				</div>
-
-			</div>
-		</footer>
-		<!-- footer-section - end
-		================================================== -->
-
-		
-		<!-- jquery include -->
-		<script src="{{asset('assets/js/jquery-3.4.1.min.js')}}"></script>
-		<script src="{{asset('assets/js/jquery-ui.js')}}"></script>
-		<script src="{{asset('assets/js/popper.min.js')}}"></script>
-		<script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
-		<script src="{{asset('assets/js/magnific-popup.min.js')}}"></script>
-		<script src="{{asset('assets/js/owl.carousel.min.js')}}"></script>
-		<script src="{{asset('assets/js/owl.carousel2.thumbs.min.js')}}"></script>
-		<script src="{{asset('assets/js/isotope.pkgd.min.js')}}"></script>
-		<script src="{{asset('assets/js/masonry.pkgd.min.js')}}"></script>
-		<script src="{{asset('assets/js/imagesloaded.pkgd.min.js')}}"></script>
-		<script src="{{asset('assets/js/countdown.js')}}"></script>
-
-		<!-- google map - jquery include -->
-        <script src="{{url('https://maps.googleapis.com/maps/api/js?key=AIzaSyDk2HrmqE4sWSei0XdKGbOMOHN3Mm2Bf-M&ver=2.1.6')}}"></script>
-        <script src="{{asset('assets/js/gmaps.min.js')}}"></script>
-
-		<!-- mobile menu - jquery include -->
-        <script src="{{asset('assets/js/mCustomScrollbar.js')}}"></script>
-
-		<!-- custom - jquery include -->
-		<script src="{{asset('assets/js/custom.js')}}"></script>
-
-
-	</body>
+				  </div>
+				</div><!-- /.col-lg-6 -->
+				<div class="col-sm-12 col-md-12 col-lg-6">
+				  <div class="video-banner">
+					<img src="assets/images/about/1.jpg" alt="about">
+					<a class="video__btn video__btn-white popup-video" href="https://www.youtube.com/watch?v=nrJtHemSPW4">
+					  <div class="video__player">
+						<i class="fa fa-play"></i>
+					  </div>
+					</a>
+				  </div><!-- /.video-banner -->
+				</div><!-- /.col-lg-6 -->
+			  </div><!-- /.row -->
+			</div><!-- /.container -->
+		  </section><!-- /.About Layout 1 -->
+	  
+		  <!-- ======================
+		  Features Layout 1
+		  ========================= -->
+		  <section class="features-layout1 pt-130 pb-50 mt--90">
+			<div class="bg-img"><img src="assets/images/backgrounds/1.jpg" alt="background"></div>
+			<div class="container">
+			  <div class="row mb-40">
+				<div class="col-sm-12 col-md-12 col-lg-5">
+				  <div class="heading__layout2">
+					<h3 class="heading__title">Providing Care for The Sickest In Community.</h3>
+				  </div>
+				</div><!-- /col-lg-5 -->
+				<div class="col-sm-12 col-md-12 col-lg-5 offset-lg-1">
+				  <p class="heading__desc font-weight-bold">Medcity has been present in Europe since 1990, offering innovative
+					solutions, specializing in medical services for treatment of medical infrastructure. With over 100
+					professionals actively participates in numerous initiatives aimed at creating sustainable change for
+					patients!
+				  </p>
+				  <div class="d-flex flex-wrap align-items-center mt-40 mb-30">
+					<a href="appointment.html" class="btn btn__primary btn__rounded mr-30">
+					  <span>Make Appointment</span>
+					  <i class="icon-arrow-right"></i>
+					</a>
+					<a href="#" class="btn btn__secondary btn__link">
+					  <i class="icon-arrow-right icon-filled"></i>
+					  <span>Our Core Values</span>
+					</a>
+				  </div>
+				</div><!-- /.col-lg-6 -->
+			  </div><!-- /.row -->
+			  <div class="row">
+				<!-- Feature item #1 -->
+				<div class="col-sm-6 col-md-6 col-lg-3">
+				  <div class="feature-item">
+					<div class="feature__content">
+					  <div class="feature__icon">
+						<i class="icon-heart"></i>
+						<i class="icon-heart feature__overlay-icon"></i>
+					  </div>
+					  <h4 class="feature__title">Medical Advices & Check Ups</h4>
+					</div><!-- /.feature__content -->
+					<a href="#" class="btn__link">
+					  <i class="icon-arrow-right icon-outlined"></i>
+					</a>
+				  </div><!-- /.feature-item -->
+				</div><!-- /.col-lg-3 -->
+				<!-- Feature item #2 -->
+				<div class="col-sm-6 col-md-6 col-lg-3">
+				  <div class="feature-item">
+					<div class="feature__content">
+					  <div class="feature__icon">
+						<i class="icon-doctor"></i>
+						<i class="icon-doctor feature__overlay-icon"></i>
+					  </div>
+					  <h4 class="feature__title">Trusted Medical Treatment </h4>
+					</div><!-- /.feature__content -->
+					<a href="#" class="btn__link">
+					  <i class="icon-arrow-right icon-outlined"></i>
+					</a>
+				  </div><!-- /.feature-item -->
+				</div><!-- /.col-lg-3 -->
+				<!-- Feature item #3 -->
+				<div class="col-sm-6 col-md-6 col-lg-3">
+				  <div class="feature-item">
+					<div class="feature__content">
+					  <div class="feature__icon">
+						<i class="icon-ambulance"></i>
+						<i class="icon-ambulance feature__overlay-icon"></i>
+					  </div>
+					  <h4 class="feature__title">Emergency Help Available 24/7</h4>
+					</div><!-- /.feature__content -->
+					<a href="#" class="btn__link">
+					  <i class="icon-arrow-right icon-outlined"></i>
+					</a>
+				  </div><!-- /.feature-item -->
+				</div><!-- /.col-lg-3 -->
+				<!-- Feature item #4 -->
+				<div class="col-sm-6 col-md-6 col-lg-3">
+				  <div class="feature-item">
+					<div class="feature__content">
+					  <div class="feature__icon">
+						<i class="icon-drugs"></i>
+						<i class="icon-drugs feature__overlay-icon"></i>
+					  </div>
+					  <h4 class="feature__title">Medical Research Professionals </h4>
+					</div><!-- /.feature__content -->
+					<a href="#" class="btn__link">
+					  <i class="icon-arrow-right icon-outlined"></i>
+					</a>
+				  </div><!-- /.feature-item -->
+				</div><!-- /.col-lg-3 -->
+				<!-- Feature item #5 -->
+				<div class="col-sm-6 col-md-6 col-lg-3">
+				  <div class="feature-item">
+					<div class="feature__content">
+					  <div class="feature__icon">
+						<i class="icon-first-aid-kit"></i>
+						<i class="icon-first-aid-kit feature__overlay-icon"></i>
+					  </div>
+					  <h4 class="feature__title">Only Qualified Doctors</h4>
+					</div><!-- /.feature__content -->
+					<a href="#" class="btn__link">
+					  <i class="icon-arrow-right icon-outlined"></i>
+					</a>
+				  </div><!-- /.feature-item -->
+				</div><!-- /.col-lg-3 -->
+				<!-- Feature item #6 -->
+				<div class="col-sm-6 col-md-6 col-lg-3">
+				  <div class="feature-item">
+					<div class="feature__content">
+					  <div class="feature__icon">
+						<i class="icon-hospital"></i>
+						<i class="icon-hospital feature__overlay-icon"></i>
+					  </div>
+					  <h4 class="feature__title">Cutting Edge Facility</h4>
+					</div><!-- /.feature__content -->
+					<a href="#" class="btn__link">
+					  <i class="icon-arrow-right icon-outlined"></i>
+					</a>
+				  </div><!-- /.feature-item -->
+				</div><!-- /.col-lg-3 -->
+				<!-- Feature item #7 -->
+				<div class="col-sm-6 col-md-6 col-lg-3">
+				  <div class="feature-item">
+					<div class="feature__content">
+					  <div class="feature__icon">
+						<i class="icon-expenses"></i>
+						<i class="icon-expenses feature__overlay-icon"></i>
+					  </div>
+					  <h4 class="feature__title">Affordable Prices For All Patients</h4>
+					</div><!-- /.feature__content -->
+					<a href="#" class="btn__link">
+					  <i class="icon-arrow-right icon-outlined"></i>
+					</a>
+				  </div><!-- /.feature-item -->
+				</div><!-- /.col-lg-3 -->
+				<!-- Feature item #8 -->
+				<div class="col-sm-6 col-md-6 col-lg-3">
+				  <div class="feature-item">
+					<div class="feature__content">
+					  <div class="feature__icon">
+						<i class="icon-bandage"></i>
+						<i class="icon-bandage feature__overlay-icon"></i>
+					  </div>
+					  <h4 class="feature__title">Quality Care For Every Patient</h4>
+					</div><!-- /.feature__content -->
+					<a href="#" class="btn__link">
+					  <i class="icon-arrow-right icon-outlined"></i>
+					</a>
+				  </div><!-- /.feature-item -->
+				</div><!-- /.col-lg-3 -->
+			  </div><!-- /.row -->
+			  <div class="row">
+				<div class="col-md-12 col-lg-6 offset-lg-3 text-center">
+				  <p class="font-weight-bold mb-0">Serve the community by improving the quality of life through better health.
+					We have put protocols to protect our patients and staff while continuing to provide medically necessary
+					care.
+					<a href="#" class="color-secondary">
+					  <span>Contact Us For More Information</span> <i class="icon-arrow-right"></i>
+					</a>
+				  </p>
+				</div><!-- /.col-lg-6 -->
+			  </div><!-- /.row -->
+			</div><!-- /.container -->
+		  </section><!-- /.Features Layout 1 -->
+	  
+		  <!-- ========================
+			  Services Layout 2
+		  =========================== -->
+		  <section class="services-layout2 services-carousel bg-overlay bg-overlay-primary pt-130">
+			<div class="bg-img"><img src="assets/images/banners/1.jpg" alt="background"></div>
+			<div class="container">
+			  <div class="row">
+				<div class="col-sm-12 col-md-12 col-lg-6">
+				  <div class="heading-layout1 heading-light mb-60">
+					<h3 class="heading__title">Our Departments</h3>
+					<p class="heading__desc">We provide all aspects of medical practice for your whole family, including
+					  general check-ups or assisting you with specific injuries.</p>
+				  </div><!-- /.heading -->
+				</div><!-- /.col-lg-6 -->
+			  </div><!-- /.row -->
+			  <div class="row">
+				<div class="col-12">
+				  <div class="carousel-container">
+					<div class="slick-carousel carousel-arrows-light carousel-dots-light"
+					  data-slick='{"slidesToShow": 4, "slidesToScroll": 2, "autoplay": true, "arrows": true, "dots": true, "responsive": [ {"breakpoint": 992, "settings": {"slidesToShow": 2}}, {"breakpoint": 767, "settings": {"slidesToShow": 1}}, {"breakpoint": 480, "settings": {"slidesToShow": 1}}]}'>
+					  <!-- service item #1 -->
+					  <div class="service-item">
+						<div class="service__img">
+						  <img src="assets/images/services/1.jpg" alt="img" loading="lazy">
+						</div><!-- /.service__img -->
+						<div class="service__content">
+						  <h4 class="service__title">Neurology Clinic</h4>
+						  <p class="service__desc">Some neurologists receive subspecialty training focusing on a particular
+							area
+							of
+							the fields, these training programs are called fellowships, and are one to two years.
+						  </p>
+						  <a href="departments-single.html" class="btn btn__secondary btn__outlined btn__rounded">
+							<span>Read More</span>
+							<i class="icon-arrow-right"></i>
+						  </a>
+						</div><!-- /.service__content -->
+					  </div><!-- /.service-item -->
+					  <!-- service item #2 -->
+					  <div class="service-item">
+						<div class="service__img">
+						  <img src="assets/images/services/2.jpg" alt="img" loading="lazy">
+						</div><!-- /.service__img -->
+						<div class="service__content">
+						  <h4 class="service__title">Cardiology Clinic</h4>
+						  <p class="service__desc">All cardiologists study the disorders of the heart, but the study of adult
+							and
+							child heart disorders are trained to take care of small children and adult heart disease.
+						  </p>
+						  <a href="departments-single.html" class="btn btn__secondary btn__outlined btn__rounded">
+							<span>Read More</span>
+							<i class="icon-arrow-right"></i>
+						  </a>
+						</div><!-- /.service__content -->
+					  </div><!-- /.service-item -->
+					  <!-- service item #3 -->
+					  <div class="service-item">
+						<div class="service__img">
+						  <img src="assets/images/services/3.jpg" alt="img" loading="lazy">
+						</div><!-- /.service__img -->
+						<div class="service__content">
+						  <h4 class="service__title">Pathology Clinic</h4>
+						  <p class="service__desc">Pathology is the study of disease, it is the bridge between science and
+							medicine.
+							Also it underpins every aspect of patient care, from diagnostic testing and treatment.
+						  </p>
+						  <a href="departments-single.html" class="btn btn__secondary btn__outlined btn__rounded">
+							<span>Read More</span>
+							<i class="icon-arrow-right"></i>
+						  </a>
+						</div><!-- /.service__content -->
+					  </div><!-- /.service-item -->
+					  <!-- service item #4 -->
+					  <div class="service-item">
+						<div class="service__img">
+						  <img src="assets/images/services/4.jpg" alt="img" loading="lazy">
+						</div><!-- /.service__img -->
+						<div class="service__content">
+						  <h4 class="service__title">Laboratory Analysis</h4>
+						  <p class="service__desc">Analyzing the radon or radon progeny concentrations with passive devices,
+							or
+							the
+							act of calibrating radon or radon progeny measurement devices.
+						  </p>
+						  <a href="departments-single.html" class="btn btn__secondary btn__outlined btn__rounded">
+							<span>Read More</span>
+							<i class="icon-arrow-right"></i>
+						  </a>
+						</div><!-- /.service__content -->
+					  </div><!-- /.service-item -->
+					  <!-- service item #5 -->
+					  <div class="service-item">
+						<div class="service__img">
+						  <img src="assets/images/services/5.jpg" alt="img" loading="lazy">
+						</div><!-- /.service__img -->
+						<div class="service__content">
+						  <h4 class="service__title">Pediatric Clinic</h4>
+						  <p class="service__desc">Pediatric providers see patients from birth into early adulthood to make
+							sure
+							children achieve stay healthy. Our care includes preventive health checkups.
+						  </p>
+						  <a href="departments-single.html" class="btn btn__secondary btn__outlined btn__rounded">
+							<span>Read More</span>
+							<i class="icon-arrow-right"></i>
+						  </a>
+						</div><!-- /.service__content -->
+					  </div><!-- /.service-item -->
+					  <!-- service item #6 -->
+					  <div class="service-item">
+						<div class="service__img">
+						  <img src="assets/images/services/6.jpg" alt="img" loading="lazy">
+						</div><!-- /.service__img -->
+						<div class="service__content">
+						  <h4 class="service__title">Cardiac Clinic</h4>
+						  <p class="service__desc">For people requiring additional follow up, the Cardiac Clinic provides
+							rapid
+							access to professionals specialized in diagnosing and treating heart disease.
+						  </p>
+						  <a href="departments-single.html" class="btn btn__secondary btn__outlined btn__rounded">
+							<span>Read More</span>
+							<i class="icon-arrow-right"></i>
+						  </a>
+						</div><!-- /.service__content -->
+					  </div><!-- /.service-item -->
+					</div><!-- /.carousel -->
+				  </div><!-- /.carousel-container -->
+				</div><!-- /.col-12 -->
+			  </div><!-- /.row -->
+			  <div class="row">
+				<div class="col-12 d-flex justify-content-end mt--20">
+				  <a href="departments.html" class="btn btn__white btn__link">
+					<span>ALl Departments</span>
+					<i class="icon-arrow-right"></i>
+				  </a>
+				</div><!-- /.col-12 -->
+			  </div><!-- /.row -->
+			</div><!-- /.container -->
+		  </section><!-- /.Services Layout 1 -->
+	  
+		  <!-- ======================
+			Team
+		  ========================= -->
+		  <section class="team-layout1 pb-80">
+			<div class="container">
+			  <div class="row">
+				<div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
+				  <div class="heading text-center mb-40">
+					<h3 class="heading__title">Meet Our Doctors</h3>
+					<p class="heading__desc">Our administration and support staff all have exceptional people skills and
+					  trained to assist you with all medical enquiries.
+					</p>
+				  </div><!-- /.heading -->
+				</div><!-- /.col-lg-6 -->
+			  </div><!-- /.row -->
+			  <div class="row">
+				<div class="col-12">
+				  <div class="slick-carousel"
+					data-slick='{"slidesToShow": 3, "slidesToScroll": 1, "autoplay": true, "arrows": false, "dots": false, "responsive": [ {"breakpoint": 992, "settings": {"slidesToShow": 2}}, {"breakpoint": 767, "settings": {"slidesToShow": 1}}, {"breakpoint": 480, "settings": {"slidesToShow": 1}}]}'>
+					<!-- Member #1 -->
+					<div class="member">
+					  <div class="member__img">
+						<img src="assets/images/team/1.jpg" alt="member img">
+						<ul class="social-icons list-unstyled mb-0">
+						  <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
+						  <li><a href="#" class="twitter"><i class="fab fa-twitter"></i></a></li>
+						  <li><a href="#" class="phone"><i class="fas fa-phone-alt"></i></a></li>
+						</ul><!-- /.social-icons -->
+					  </div><!-- /.member-img -->
+					  <div class="member__info">
+						<h5 class="member__name"><a href="doctors-single-doctor1.html">Mike Dooley</a></h5>
+						<p class="member__job">Cardiology Specialist</p>
+						<p class="member__desc">Muldoone obtained his undergraduate degree in Biomedical Engineering at Tulane
+						  University prior to attending St George's University School of Medicine</p>
+						<div class="mt-20 d-flex flex-wrap justify-content-between align-items-center">
+						  <a href="doctors-single-doctor1.html" class="btn btn__secondary btn__link btn__rounded">
+							<span>Read More</span>
+							<i class="icon-arrow-right"></i>
+						  </a>
+						</div>
+					  </div><!-- /.member-info -->
+					</div><!-- /.member -->
+					<!-- Member #2 -->
+					<div class="member">
+					  <div class="member__img">
+						<img src="assets/images/team/2.jpg" alt="member img">
+						<ul class="social-icons list-unstyled mb-0">
+						  <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
+						  <li><a href="#" class="twitter"><i class="fab fa-twitter"></i></a></li>
+						  <li><a href="#" class="phone"><i class="fas fa-phone-alt"></i></a></li>
+						</ul><!-- /.social-icons -->
+					  </div><!-- /.member-img -->
+					  <div class="member__info">
+						<h5 class="member__name"><a href="doctors-single-doctor1.html">Dermatologists</a></h5>
+						<p class="member__job">Cardiology Specialist</p>
+						<p class="member__desc">Brian specializes in treating skin, hair, nail, and mucous membrane. He also
+						  address cosmetic issues, helping to revitalize the appearance of the skin</p>
+						<div class="mt-20 d-flex flex-wrap justify-content-between align-items-center">
+						  <a href="doctors-single-doctor1.html" class="btn btn__secondary btn__link btn__rounded">
+							<span>Read More</span>
+							<i class="icon-arrow-right"></i>
+						  </a>
+						</div>
+					  </div><!-- /.member-info -->
+					</div><!-- /.member -->
+					<!-- Member #3 -->
+					<div class="member">
+					  <div class="member__img">
+						<img src="assets/images/team/3.jpg" alt="member img">
+						<ul class="social-icons list-unstyled mb-0">
+						  <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
+						  <li><a href="#" class="twitter"><i class="fab fa-twitter"></i></a></li>
+						  <li><a href="#" class="phone"><i class="fas fa-phone-alt"></i></a></li>
+						</ul><!-- /.social-icons -->
+					  </div><!-- /.member-img -->
+					  <div class="member__info">
+						<h5 class="member__name"><a href="doctors-single-doctor1.html">Maria Andaloro</a></h5>
+						<p class="member__job">Pediatrician</p>
+						<p class="member__desc">Andaloro graduated from medical school and completed 3 years residency program
+						  in pediatrics. She passed rigorous exams by the American Board of Pediatrics.</p>
+						<div class="mt-20 d-flex flex-wrap justify-content-between align-items-center">
+						  <a href="doctors-single-doctor1.html" class="btn btn__secondary btn__link btn__rounded">
+							<span>Read More</span>
+							<i class="icon-arrow-right"></i>
+						  </a>
+						</div>
+					  </div><!-- /.member-info -->
+					</div><!-- /.member -->
+					<!-- Member #4 -->
+					<div class="member">
+					  <div class="member__img">
+						<img src="assets/images/team/4.jpg" alt="member img">
+						<ul class="social-icons list-unstyled mb-0">
+						  <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
+						  <li><a href="#" class="twitter"><i class="fab fa-twitter"></i></a></li>
+						  <li><a href="#" class="phone"><i class="fas fa-phone-alt"></i></a></li>
+						</ul><!-- /.social-icons -->
+					  </div><!-- /.member-img -->
+					  <div class="member__info">
+						<h5 class="member__name"><a href="doctors-single-doctor1.html">Dupree Black</a></h5>
+						<p class="member__job">Urologist</p>
+						<p class="member__desc">Black diagnose and treat diseases of the urinary tract in both men and women.
+						  He
+						  also diagnose and treat anything involving the reproductive tract in men.</p>
+						<div class="mt-20 d-flex flex-wrap justify-content-between align-items-center">
+						  <a href="doctors-single-doctor1.html" class="btn btn__secondary btn__link btn__rounded">
+							<span>Read More</span>
+							<i class="icon-arrow-right"></i>
+						  </a>
+						</div>
+					  </div><!-- /.member-info -->
+					</div><!-- /.member -->
+					<!-- Member #5 -->
+					<div class="member">
+					  <div class="member__img">
+						<img src="assets/images/team/5.jpg" alt="member img">
+						<ul class="social-icons list-unstyled mb-0">
+						  <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
+						  <li><a href="#" class="twitter"><i class="fab fa-twitter"></i></a></li>
+						  <li><a href="#" class="phone"><i class="fas fa-phone-alt"></i></a></li>
+						</ul><!-- /.social-icons -->
+					  </div><!-- /.member-img -->
+					  <div class="member__info">
+						<h5 class="member__name"><a href="doctors-single-doctor1.html">Markus skar</a></h5>
+						<p class="member__job">Laboratory</p>
+						<p class="member__desc">Skar play a very important role in your health care. People working in the
+						  clinical laboratory are responsible for conducting tests that provide crucial information.</p>
+						<div class="mt-20 d-flex flex-wrap justify-content-between align-items-center">
+						  <a href="doctors-single-doctor1.html" class="btn btn__secondary btn__link btn__rounded">
+							<span>Read More</span>
+							<i class="icon-arrow-right"></i>
+						  </a>
+						</div>
+					  </div><!-- /.member-info -->
+					</div><!-- /.member -->
+					<!-- Member #6 -->
+					<div class="member">
+					  <div class="member__img">
+						<img src="assets/images/team/6.jpg" alt="member img">
+						<ul class="social-icons list-unstyled mb-0">
+						  <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
+						  <li><a href="#" class="twitter"><i class="fab fa-twitter"></i></a></li>
+						  <li><a href="#" class="phone"><i class="fas fa-phone-alt"></i></a></li>
+						</ul><!-- /.social-icons -->
+					  </div><!-- /.member-img -->
+					  <div class="member__info">
+						<h5 class="member__name"><a href="doctors-single-doctor1.html">Kiano Barker</a></h5>
+						<p class="member__job">Pathologist </p>
+						<p class="member__desc">Barker help care for patients every day by providing their doctors with the
+						  information needed to ensure appropriate care. He also valuable resources for other physicians.</p>
+						<div class="mt-20 d-flex flex-wrap justify-content-between align-items-center">
+						  <a href="doctors-single-doctor1.html" class="btn btn__secondary btn__link btn__rounded">
+							<span>Read More</span>
+							<i class="icon-arrow-right"></i>
+						  </a>
+						</div>
+					  </div><!-- /.member-info -->
+					</div><!-- /.member -->
+				  </div><!-- /.carousel -->
+				</div><!-- /.col-12 -->
+			  </div><!-- /.row -->
+			</div><!-- /.container -->
+		  </section><!-- /.Team -->
+	  
+		  <!-- ========================= 
+			Testimonials layout 1
+			=========================  -->
+		  <section class="testimonials-layout1 pt-130 pb-80">
+			<div class="container">
+			  <div class="testimonials-wrapper">
+				<div class="row">
+				  <div class="col-sm-12 col-md-12 col-lg-7 offset-lg-5">
+					<div class="heading-layout2">
+					  <h3 class="heading__title">Inspiring Stories!</h3>
+					</div><!-- /.heading -->
+				  </div><!-- /.col-lg-7 -->
+				  <div class="col-sm-12 col-md-12 col-lg-5">
+					<div class="slider-nav mb-60">
+					  <div class="testimonial__meta">
+						<div class="testimonial__thmb">
+						  <img src="assets/images/testimonials/thumbs/1.png" alt="author thumb">
+						</div><!-- /.testimonial-thumb -->
+						<div>
+						  <h4 class="testimonial__meta-title">Sami Wade</h4>
+						  <p class="testimonial__meta-desc">7oroof Inc</p>
+						</div>
+					  </div><!-- /.testimonial-meta -->
+					  <div class="testimonial__meta">
+						<div class="testimonial__thmb">
+						  <img src="assets/images/testimonials/thumbs/2.png" alt="author thumb">
+						</div><!-- /.testimonial-thumb -->
+						<div>
+						  <h4 class="testimonial__meta-title">Ahmed</h4>
+						  <p class="testimonial__meta-desc">Web Inc</p>
+						</div>
+					  </div><!-- /.testimonial-meta -->
+					  <div class="testimonial__meta">
+						<div class="testimonial__thmb">
+						  <img src="assets/images/testimonials/thumbs/3.png" alt="author thumb">
+						</div><!-- /.testimonial-thumb -->
+						<div>
+						  <h4 class="testimonial__meta-title">Sonia Blake</h4>
+						  <p class="testimonial__meta-desc">Web Inc</p>
+						</div>
+					  </div><!-- /.testimonial-meta -->
+					</div><!-- /.slider-nav -->
+				  </div><!-- /.col-lg-5 -->
+				  <div class="col-sm-12 col-md-12 col-lg-7">
+					<div class="slider-with-navs">
+					  <!-- Testimonial #1 -->
+					  <div class="testimonial-item">
+						<h3 class="testimonial__title">“Their doctors include highly qualified practitioners who come from a
+						  range of backgrounds and bring with them a diversity of skills and special interests. They also have
+						  registered nurses on staff who are available to triage any urgent matters, and the administration
+						  and support staff all have exceptional people skills”
+						</h3>
+					  </div><!-- /. testimonial-item -->
+					  <!-- Testimonial #2 -->
+					  <div class="testimonial-item">
+						<h3 class="testimonial__title">“Their doctors include highly qualified practitioners who come from a
+						  range of backgrounds and bring with them a diversity of skills and special interests. They also have
+						  registered nurses on staff who are available to triage any urgent matters, and the administration
+						  and support staff all have exceptional people skills”
+						</h3>
+					  </div><!-- /. testimonial-item -->
+					  <!-- Testimonial #3 -->
+					  <div class="testimonial-item">
+						<h3 class="testimonial__title">“Their doctors include highly qualified practitioners who come from a
+						  range of backgrounds and bring with them a diversity of skills and special interests. They also have
+						  registered nurses on staff who are available to triage any urgent matters, and the administration
+						  and support staff all have exceptional people skills”
+						</h3>
+					  </div><!-- /. testimonial-item -->
+					</div><!-- /.slick-carousel -->
+					<div class="testimonials__rating">
+					  <div class="testimonials__rating-inner d-flex align-items-center">
+						<span class="total__rate">4.9</span>
+						<div>
+						  <span class="overall__rate">Zocdoc Overall Rating</span>
+						  <span>, based on 7541 reviews.</span>
+						</div>
+					  </div><!-- /.testimonials__rating-inner -->
+					</div><!-- /.testimonials__rating -->
+				  </div><!-- /.col-lg-7 -->
+				</div><!-- /.row -->
+			  </div><!-- /.testimonials-wrapper -->
+			</div><!-- /.container -->
+		  </section><!-- /.testimonials layout 1 -->
+	  
+		  <!-- ======================
+			Blog Grid
+		  ========================= -->
+		  <section class="blog-grid pb-50">
+			<div class="container">
+			  <div class="row">
+				<div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
+				  <div class="heading text-center mb-40">
+					<h2 class="heading__subtitle">Resource Library</h2>
+					<h3 class="heading__title">Recent Articles</h3>
+				  </div><!-- /.heading -->
+				</div><!-- /.col-lg-6 -->
+			  </div><!-- /.row -->
+			  <div class="row">
+				<!-- Post Item #1 -->
+				<div class="col-sm-12 col-md-6 col-lg-4">
+				  <div class="post-item">
+					<div class="post__img">
+					  <a href="blog-single-post.html">
+						<img src="assets/images/blog/grid/1.jpg" alt="post image" loading="lazy">
+					  </a>
+					</div><!-- /.post__img -->
+					<div class="post__body">
+					  <div class="post__meta-cat">
+						<a href="#">Mental Health</a>
+					  </div><!-- /.blog-meta-cat -->
+					  <div class="post__meta d-flex">
+						<span class="post__meta-date">Jan 30, 2022</span>
+						<a class="post__meta-author" href="#">Martin King</a>
+					  </div>
+					  <h4 class="post__title"><a href="#">6 Tips to Protect Your Mental Health When You’re Sick</a></h4>
+	  
+					  <p class="post__desc">It’s normal to feel anxiety, worry and grief any time you’re diagnosed with a
+						condition that’s certainly true if you test positive for COVID-19, or are presumed to be positive...
+					  </p>
+					  <a href="blog-single-post.html" class="btn btn__secondary btn__link btn__rounded">
+						<span>Read More</span>
+						<i class="icon-arrow-right"></i>
+					  </a>
+					</div><!-- /.post__body -->
+				  </div><!-- /.post-item -->
+				</div><!-- /.col-lg-4 -->
+				<!-- Post Item #2 -->
+				<div class="col-sm-12 col-md-6 col-lg-4">
+				  <div class="post-item">
+					<div class="post__img">
+					  <a href="blog-single-post.html">
+						<img src="assets/images/blog/grid/2.jpg" alt="post image" loading="lazy">
+					  </a>
+					</div><!-- /.post__img -->
+					<div class="post__body">
+					  <div class="post__meta-cat">
+						<a href="#">Infectious</a><a href="#">Tips</a>
+					  </div><!-- /.blog-meta-cat -->
+					  <div class="post__meta d-flex">
+						<span class="post__meta-date">Jan 30, 2022</span>
+						<a class="post__meta-author" href="#">John Ezak</a>
+					  </div>
+					  <h4 class="post__title"><a href="#">Unsure About Wearing a Face Mask? Here’s How and Why</a></h4>
+					  <p class="post__desc">That means that you should still be following any shelter-in-place orders in your
+						community. But when you’re venturing out to the grocery store, pharmacy or hospital..
+					  </p>
+					  <a href="blog-single-post.html" class="btn btn__secondary btn__link btn__rounded">
+						<span>Read More</span>
+						<i class="icon-arrow-right"></i>
+					  </a>
+					</div><!-- /.post__body -->
+				  </div><!-- /.post-item -->
+				</div><!-- /.col-lg-4 -->
+				<!-- Post Item #3 -->
+				<div class="col-sm-12 col-md-6 col-lg-4">
+				  <div class="post-item">
+					<div class="post__img">
+					  <a href="blog-single-post.html">
+						<img src="assets/images/blog/grid/3.jpg" alt="post image" loading="lazy">
+					  </a>
+					</div><!-- /.post__img -->
+					<div class="post__body">
+					  <div class="post__meta-cat">
+						<a href="#">Life Style</a><a href="#">Nutrition</a>
+					  </div><!-- /.blog-meta-cat -->
+					  <div class="post__meta d-flex">
+						<span class="post__meta-date">Jan 28, 2022</span>
+						<a class="post__meta-author" href="#">Saul Wade</a>
+					  </div>
+					  <h4 class="post__title"><a href="#">Tips for Eating Healthy When You’re Working From Home </a></h4>
+	  
+					  <p class="post__desc">It’s normal to feel anxiety, worry and grief any time you’re diagnosed with a
+						condition that’s certainly true if you test positive for COVID-19, or are presumed to be positive...
+					  </p>
+					  <a href="blog-single-post.html" class="btn btn__secondary btn__link btn__rounded">
+						<span>Read More</span>
+						<i class="icon-arrow-right"></i>
+					  </a>
+					</div><!-- /.post__body -->
+				  </div><!-- /.post-item -->
+				</div><!-- /.col-lg-4 -->
+			  </div><!-- /.row -->
+			</div><!-- /.container -->
+		  </section><!-- /.blog Grid -->
+	  
+		  <!-- ==========================
+			  contact layout 5
+		  =========================== -->
+		  <section class="contact-layout5 bg-overlay bg-overlay-blue-gradient pb-60">
+			<div class="bg-img"><img src="assets/images/banners/3.jpg" alt="banner"></div>
+			<div class="container">
+			  <div class="row">
+				<div class="col-sm-12 col-md-12 col-lg-5 d-flex flex-column justify-content-between">
+				  <div>
+					<div class="heading heading-light mb-30">
+					  <h3 class="heading__title mb-30">Committed To Build A Positive, Safe, Patient Focused Culture.</h3>
+					  <p class="heading__desc">Today the hospital is recognised as a world renowned institution, not only
+						providing outstanding care and treatment, our goal is to deliver quality care in a respectful &
+						compassionate manner. We strive to be the first and best choice for healthcare.
+					  </p>
+					</div>
+					<div class="d-flex align-items-center mb-30">
+					  <a href="doctors-modern.html" class="btn btn__white btn__white-style2 btn__rounded mr-30">
+						<span>Find A Doctor</span> <i class="icon-arrow-right"></i>
+					  </a>
+					  <a href="contact-us.html" class="btn btn__white btn__outlined btn__rounded">Contact Us</a>
+					</div>
+				  </div>
+				  <ul class="list-items list-items-layout2 list-items-light list-horizontal list-unstyled mb-50">
+					<li>Fractures and dislocations</li>
+					<li>Health Assessments</li>
+					<li>Desensitisation injections</li>
+					<li>High Quality Care</li>
+					<li> Home medicine review</li>
+				  </ul>
+				</div><!-- /.col-lg-5 -->
+				<div class="col-sm-12 col-md-12 col-lg-7">
+				  <div class="contact-panel mb-50">
+					<form class="contact-panel__form" method="post" action="assets/php/contact.php" id="contactForm">
+					  <div class="row">
+						<div class="col-sm-12">
+						  <h4 class="contact-panel__title">Book An Appointment</h4>
+						  <p class="contact-panel__desc mb-30">Please feel welcome to contact our friendly reception staff
+							with any general or medical enquiry. Our doctors will receive or return any urgent calls.
+						  </p>
+						</div>
+						<div class="col-sm-6 col-md-6 col-lg-6">
+						  <div class="form-group">
+							<i class="icon-widget form-group-icon"></i>
+							<select class="form-control">
+							  <option value="0">Choose Clinic</option>
+							  <option value="1">Pathology Clinic</option>
+							  <option value="2">Pathology Clinic</option>
+							</select>
+						  </div>
+						</div><!-- /.col-lg-6 -->
+						<div class="col-sm-6 col-md-6 col-lg-6">
+						  <div class="form-group">
+							<i class="icon-user form-group-icon"></i>
+							<select class="form-control">
+							  <option value="0">Choose Doctor</option>
+							  <option value="1">Ahmed Abdallah</option>
+							  <option value="2">Mahmoud Begha</option>
+							</select>
+						  </div>
+						</div><!-- /.col-lg-6 -->
+						<div class="col-sm-6 col-md-6 col-lg-6">
+						  <div class="form-group">
+							<i class="icon-news form-group-icon"></i>
+							<input type="text" class="form-control" placeholder="Name" id="contact-name" name="contact-name"
+							  required>
+						  </div>
+						</div><!-- /.col-lg-6 -->
+						<div class="col-sm-6 col-md-6 col-lg-6">
+						  <div class="form-group">
+							<i class="icon-email form-group-icon"></i>
+							<input type="email" class="form-control" placeholder="Email" id="contact-email"
+							  name="contact-email" required>
+						  </div>
+						</div><!-- /.col-lg-6 -->
+						<div class="col-sm-4 col-md-4 col-lg-4">
+						  <div class="form-group">
+							<i class="icon-phone form-group-icon"></i>
+							<input type="text" class="form-control" placeholder="Phone" id="contact-Phone"
+							  name="contact-phone" required>
+						  </div>
+						</div><!-- /.col-lg-4 -->
+						<div class="col-sm-4 col-md-4 col-lg-4">
+						  <div class="form-group form-group-date">
+							<i class="icon-calendar form-group-icon"></i>
+							<input type="date" class="form-control" id="contact-date" name="contact-date" required>
+						  </div>
+						</div><!-- /.col-lg-4 -->
+						<div class="col-sm-4 col-md-4 col-lg-4">
+						  <div class="form-group form-group-date">
+							<i class="icon-clock form-group-icon"></i>
+							<input type="time" class="form-control" id="contact-time" name="contact-time" required>
+						  </div>
+						</div><!-- /.col-lg-4 -->
+						<div class="col-12">
+						  <button type="submit" class="btn btn__primary btn__rounded btn__block btn__xhight mt-10">
+							<span>Book Appointment</span> <i class="icon-arrow-right"></i>
+						  </button>
+						  <div class="contact-result"></div>
+						</div><!-- /.col-lg-12 -->
+					  </div><!-- /.row -->
+					</form>
+				  </div>
+				</div><!-- /.col-lg-7 -->
+			  </div><!-- /.row -->
+			</div><!-- /.container -->
+		  </section><!-- /.contact layout 5 -->
+	  
+		  <!-- ========================
+			  About Layout 5
+			=========================== -->
+		  <section class="about-layout5">
+			<div class="container">
+			  <div class="row">
+				<div class="col-sm-12 col-md-12 col-lg-5">
+				  <div class="heading-layout2">
+					<h3 class="heading__title mb-80">Helping Patients From Around the Globe!!</h3>
+				  </div><!-- /heading -->
+				  <div class="map-wrapper mb-50">
+					<img src="assets/images/backgrounds/map.png" alt="map">
+					<div class="tooltip-box">
+					  <div class="tooltip__icon">
+						<i class="fas fa-plus"></i>
+					  </div><!-- /.tooltip__icon -->
+					  <div class="tooltip__panel">
+						<p class="tooltip__title mb-0">2307 Beverley Rd Brooklyn, New York 11226 U.S.</p>
+					  </div><!-- /.tooltip__panel -->
+					</div><!-- /.tooltip-box -->
+					<div class="tooltip-box tooltip-hover-left">
+					  <div class="tooltip__icon">
+						<i class="fas fa-plus"></i>
+					  </div><!-- /.tooltip__icon -->
+					  <div class="tooltip__panel">
+						<p class="tooltip__title mb-0">2307 Beverley Rd Brooklyn, New York 11226 U.S.</p>
+					  </div><!-- /.tooltip__panel -->
+					</div><!-- /.tooltip-box -->
+					<div class="tooltip-box">
+					  <div class="tooltip__icon">
+						<i class="fas fa-plus"></i>
+					  </div><!-- /.tooltip__icon -->
+					  <div class="tooltip__panel">
+						<p class="tooltip__title mb-0">2307 Beverley Rd Brooklyn, New York 11226 U.S.</p>
+					  </div><!-- /.tooltip__panel -->
+					</div><!-- /.tooltip-box -->
+				  </div><!-- /.map-wrapper -->
+				</div><!-- /.col-lg-6 -->
+				<div class="col-sm-12 col-md-12 col-lg-6 offset-lg-1">
+				  <p class="heading__desc color-secondary font-weight-bold mb-30">We will work with you to develop
+					individualised care plans,
+					management of chronic diseases. If we cannot assist, we can provide referrals or advice about the type of
+					practitioner you require.</p>
+				  <p class="heading__desc mb-30">We are committed to being the region’s premier healthcare network by
+					providing
+					patient-centered care that inspires clinical and service excellence, making us the first and best choice
+					for our patients, employees, physicians, employers, volunteers and communities. We serve the community by
+					improving the quality of life through better health.</p>
+				  <div class="d-flex align-items-center mb-60">
+					<a href="contact-us.html" class="btn btn__secondary btn__rounded mr-30">
+					  <i class="fas fa-heart"></i> <span>Make A Gift</span>
+					</a>
+					<a href="contact-us.html" class="btn btn__secondary btn__outlined btn__rounded mr-30">
+					  More About Us
+					</a>
+				  </div>
+				  <ul class="list-items list-items-layout3 list-unstyled">
+					<li>We conduct a range of tests to help us work out why you're not feeling well and determine the right
+					  treatment for you.</li>
+					<li>Our expert doctors, nurses and allied health professionals manage patients with a broad range of
+					  medical issues.</li>
+					<li>We offer a wide range of care and support to our patients, from diagnosis to treatment and
+					  rehabilitation.</li>
+				  </ul>
+				</div><!-- /.col-lg-6 -->
+			  </div><!-- /.row -->
+			</div><!-- /.container -->
+		  </section><!-- /.About Layout 5 -->
+	  
+		  <!-- ========================
+			Footer
+		  ========================== -->
+		  <footer class="footer">
+			<div class="footer-primary">
+			  <div class="container">
+				<div class="row">
+				  <div class="col-sm-12 col-md-12 col-lg-3">
+					<div class="footer-widget-about">
+					  <img src="assets/images/logo/logo-light.png" alt="logo" class="mb-30">
+					  <p class="color-gray">Our goal is to deliver quality of care in a courteous, respectful, and
+						compassionate manner. We hope you will allow us to care for you and strive to be the first and best
+						choice for your family healthcare.
+					  </p>
+					  <a href="appointment.html" class="btn btn__primary btn__primary-style2 btn__link">
+						<span>Make Appointment</span> <i class="icon-arrow-right"></i>
+					  </a>
+					</div><!-- /.footer-widget__content -->
+				  </div><!-- /.col-xl-2 -->
+				  <div class="col-sm-6 col-md-6 col-lg-2 offset-lg-1">
+					<div class="footer-widget-nav">
+					  <h6 class="footer-widget__title">Departments</h6>
+					  <nav>
+						<ul class="list-unstyled">
+						  <li><a href="#">Neurology Clinic</a></li>
+						  <li><a href="#">Cardiology Clinic</a></li>
+						  <li><a href="#">Pathology Clinic</a></li>
+						  <li><a href="#">Laboratory Analysis</a></li>
+						  <li><a href="#">Pediatric Clinic</a></li>
+						  <li><a href="#">Cardiac Clinic</a></li>
+						</ul>
+					  </nav>
+					</div><!-- /.footer-widget__content -->
+				  </div><!-- /.col-lg-2 -->
+				  <div class="col-sm-6 col-md-6 col-lg-2">
+					<div class="footer-widget-nav">
+					  <h6 class="footer-widget__title">Links</h6>
+					  <nav>
+						<ul class="list-unstyled">
+						  <li><a href="#">About Us</a></li>
+						  <li><a href="#">Our CLinic</a></li>
+						  <li><a href="#">Our Doctors</a></li>
+						  <li><a href="#">News & Media</a></li>
+						  <li><a href="#">Appointments</a></li>
+						</ul>
+					  </nav>
+					</div><!-- /.footer-widget__content -->
+				  </div><!-- /.col-lg-2 -->
+				  <div class="col-sm-12 col-md-6 col-lg-4">
+					<div class="footer-widget-contact">
+					  <h6 class="footer-widget__title color-heading">Quick Contacts</h6>
+					  <ul class="contact-list list-unstyled">
+						<li>If you have any questions or need help, feel free to contact with our team.</li>
+						<li>
+						  <a href="tel:01061245741" class="phone__number">
+							<i class="icon-phone"></i> <span>01061245741</span>
+						  </a>
+						</li>
+						<li class="color-body">2307 Beverley Rd Brooklyn, New York 11226 United States.</li>
+					  </ul>
+					  <div class="d-flex align-items-center">
+						<a href="contact-us.html" class="btn btn__primary btn__link mr-30">
+						  <i class="icon-arrow-right"></i> <span>Get Directions</span>
+						</a>
+						<ul class="social-icons list-unstyled mb-0">
+						  <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+						  <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+						  <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+						</ul><!-- /.social-icons -->
+					  </div>
+					</div><!-- /.footer-widget__content -->
+				  </div><!-- /.col-lg-2 -->
+				</div><!-- /.row -->
+			  </div><!-- /.container -->
+			</div><!-- /.footer-primary -->
+			<div class="footer-secondary">
+			  <div class="container">
+				<div class="row align-items-center">
+				  <div class="col-sm-12 col-md-6 col-lg-6">
+					<span class="fz-14">&copy; 2020 DataSoft, All Rights Reserved. With Love by</span>
+					<a class="fz-14 color-primary" href="http://themeforest.net/user/7oroof">7oroof.com</a>
+				  </div><!-- /.col-lg-6 -->
+				  <div class="col-sm-12 col-md-6 col-lg-6">
+					<nav>
+					  <ul class="list-unstyled footer__copyright-links d-flex flex-wrap justify-content-end mb-0">
+						<li><a href="#">Terms & Conditions</a></li>
+						<li><a href="#">Privacy Policy</a></li>
+						<li><a href="#">Cookies</a></li>
+					  </ul>
+					</nav>
+				  </div><!-- /.col-lg-6 -->
+				</div><!-- /.row -->
+			  </div><!-- /.container -->
+			</div><!-- /.footer-secondary -->
+		  </footer><!-- /.Footer -->
+		  <div class="search-popup">
+			<button type="button" class="search-popup__close"><i class="fas fa-times"></i></button>
+			<form class="search-popup__form">
+			  <input type="text" class="search-popup__form__input" placeholder="Type Words Then Enter">
+			  <button class="search-popup__btn"><i class="icon-search"></i></button>
+			</form>
+		  </div><!-- /. search-popup -->
+		  <button id="scrollTopBtn"><i class="fas fa-long-arrow-alt-up"></i></button>
+		</div><!-- /.wrapper -->
+	  
+		<script src="assets/js/jquery-3.5.1.min.js"></script>
+		<script src="assets/js/plugins.js"></script>
+		<script src="assets/js/main.js"></script>
+	  </body>
 </html>
