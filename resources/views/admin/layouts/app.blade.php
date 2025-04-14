@@ -23,7 +23,7 @@
         <link href="{{asset('admin/assets/css/icons.min.css')}}" rel="stylesheet" type="text/css" />
         <!-- App Css-->
         <link href="{{asset('admin/assets/css/app.min.css')}}" rel="stylesheet" type="text/css" />
-
+        @yield('style')
     </head>
 
     <body data-topbar="colored">
@@ -284,7 +284,7 @@
 
         <!-- Datatable init js -->
         <script src="{{asset('admin/assets/js/pages/datatables.init.js')}}"></script>
-
+        @yield('script')
         <script src="{{asset('admin/assets/js/app.js')}}"></script>
 
     </body>
