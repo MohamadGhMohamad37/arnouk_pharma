@@ -177,7 +177,7 @@
                                     <span>{{ __('admin.arnouk_pharma') }}</span>
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
-                                    <li><a href="email-inbox.html">{{ __('admin.about') }}</a></li>
+                                    <li><a href="{{ route('about.index', ['lang' => app()->getLocale()]) }}">{{ __('admin.about') }}</a></li>
                                     <li><a href="email-read.html">{{ __('admin.serviec') }}</a></li>
                                     <li><a href="email-compose.html">{{ __('admin.product') }}</a></li>
                                     <li><a href="email-compose.html">{{ __('admin.event') }}</a></li>

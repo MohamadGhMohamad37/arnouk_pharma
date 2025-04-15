@@ -1,5 +1,7 @@
 @extends('website.layouts.app')
-@section('title','Welcome Arnouk Pharma')
+@section('title','
+
+Arnouk Pharma')
 @section('content')
 		
 		  <!-- ============================

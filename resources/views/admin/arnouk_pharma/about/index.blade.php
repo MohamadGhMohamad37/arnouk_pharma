@@ -1,4 +1,5 @@
 @extends('admin.layouts.app')
+@section('title','Arnouk Pharma About')
 @section('content')
 
             <!-- ============================================================== -->
@@ -47,13 +48,14 @@
                                 <div class="col-12">
                                     <div class="card">
                                         <div class="card-body">
-            
-                                            <h4 class="header-title">Buttons example</h4>
-                                            <p class="card-title-desc">The Buttons extension for DataTables
-                                                provides a common set of options, API methods and styling to display
-                                                buttons on a page that will interact with a DataTable. The core library
-                                                provides the based framework upon which plug-ins can built.
-                                            </p>
+                                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                                <h4 class="header-title">About Arnouk Pharma</h4>
+                                                <a href="{{ route('about.create', ['lang' => app()->getLocale()]) }}" class="btn btn-success">
+                                                    + Create
+                                                </a>
+                                            </div>
+
+                                            <h4 class="header-title">About Arnouk Pharma</h4>
             
                                             <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                                 <thead>
@@ -73,9 +75,18 @@
                                                     <td>{{ $about->{'description_' . app()->getLocale()} }}</td>
                                                     <td>{{ $about->created_at }}</td>
                                                     <td>
+                                                    <a href="{{ route('about.edit', ['about' => $about->id, 'lang' => app()->getLocale()]) }}" class="btn btn-warning btn-sm">
+                                                        Edit
+                                                    </a>
                                                     <a href="{{ route('about.show', ['about' => $about->id, 'lang' => app()->getLocale()]) }}" class="btn btn-info btn-sm">
                                                         Show
                                                     </a>
+                                                    <form action="{{ route('about.destroy', ['about' => $about->id, 'lang' => app()->getLocale()]) }}" method="POST" style="display:inline-block;" class="delete-form">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <button type="submit" class="btn btn-danger btn-sm delete-btn">Delete</button>
+                                                    </form>
+
                                                     </td>   
                                                 </tr>
                                                 @endforeach
@@ -427,4 +438,44 @@
 
         <!-- Right bar overlay-->
         <div class="rightbar-overlay"></div>
+@endsection
+@section('script')
+<script src="{{url('https://cdn.jsdelivr.net/npm/sweetalert2@11')}}"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const deleteForms = document.querySelectorAll('.delete-form');
+
+        deleteForms.forEach(form => {
+            form.addEventListener('submit', function (e) {
+                e.preventDefault(); // منع الإرسال الافتراضي
+
+                Swal.fire({
+                    title: 'Are you sure?',
+                    text: "You won't be able to revert this!",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes, delete it!'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        form.submit(); // إرسال النموذج
+                    }
+                });
+            });
+        });
+    });
+</script>
+@if(session('success'))
+<script>
+    Swal.fire({
+        icon: 'success',
+        title: 'Success',
+        text: '{{ session('success') }}',
+        timer: 2000,
+        showConfirmButton: false
+    });
+</script>
+@endif
+
 @endsection
