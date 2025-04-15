@@ -58,7 +58,7 @@
 			  <div class="container-fluid">
 				<a class="navbar-brand" href="index.html">
 				  <img src="assets/images/logo/logo-light.png" class="logo-light" alt="logo">
-				  <img src="assets/images/logo/logo-dark.png" class="logo-dark" alt="logo">
+				  <img src="{{asset('assets/images/logo/logo-dark.png')}}" class="logo-dark" alt="logo">
 				</a>
 				<button class="navbar-toggler" type="button">
 				  <span class="menu-lines"><span></span></span>
@@ -69,7 +69,7 @@
 					  <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link"><img src="{{asset('assets/images/logo/favourite_icon.png')}}" width='34px' alt=""> {{ __('messages.arnouk_pharmacy') }}</a>
 					  <ul class="dropdown-menu">
 						<li class="nav__item">
-						  <a href="" class="nav__item-link">{{ __('messages.about') }}</a>
+						  <a href="{{ route('about.arnoukPharma.page', ['lang' => app()->getLocale()]) }}" class="nav__item-link">{{ __('messages.about') }}</a>
 						</li><!-- /.nav-item -->
 						<li class="nav__item">
 						  <a href="" class="nav__item-link">{{ __('messages.serviec') }}</a>
@@ -164,23 +164,19 @@
 							<img src="{{asset('assets/images/logo/logo.webp')}}" width="34px" alt="">
 						</a>
 					</li>
-
-					<div class="dropdown lang-dropdown">
-						<button class="dropdown-toggle lang-dropdown-toggle" id="langDropdown" data-toggle="dropdown">
-						  <img src="assets/images/flags/en.png" alt="en">
-						</button>
-						<div class="dropdown-menu" aria-labelledby="langDropdown">
-						  <a class="dropdown-item" href="#">
-							<img src="assets/images/flags/fr.png" alt="en">
-						  </a>
-						  <a class="dropdown-item" href="#">
-							<img src="assets/images/flags/gr.png" alt="en">
-						  </a>
-						</div>
-					  </div>
+					<li class="nav__item has-dropdown">
+						<a href="#!" data-toggle="dropdown" class="dropdown-toggle nav__item-link">
+							<img src="{{asset('assets/images/flags/en.png')}}" alt="en" width="34px">
+						</a>
+						<ul class="dropdown-menu">
+							<li class="nav__item">
+								<a class="nav__item-link" href="#">
+									<img src="{{asset('assets/images/flags/fr.png')}}" alt="fr" width="34px">
+								</a>
+							</li>
+						</ul>
+					</li>
 				  </ul>
-				  
-				  
 				  <!-- /.navbar-nav -->
 				  <button class="close-mobile-menu d-block d-lg-none"><i class="fas fa-times"></i></button>
 				</div><!-- /.navbar-collapse -->
@@ -197,7 +193,7 @@
 				<div class="row">
 				  <div class="col-sm-12 col-md-12 col-lg-3">
 					<div class="footer-widget-about">
-					  <img src="assets/images/logo/logo-light.png" alt="logo" class="mb-30">
+					  <img src="{{asset('assets/images/logo/logo-dark.png')}}" alt="logo" class="mb-30">
 					  <p class="color-gray">Our goal is to deliver quality of care in a courteous, respectful, and
 						compassionate manner. We hope you will allow us to care for you and strive to be the first and best
 						choice for your family healthcare.
@@ -293,8 +289,8 @@
 		  <button id="scrollTopBtn"><i class="fas fa-long-arrow-alt-up"></i></button>
 		</div><!-- /.wrapper -->
 	  
-		<script src="assets/js/jquery-3.5.1.min.js"></script>
-		<script src="assets/js/plugins.js"></script>
-		<script src="assets/js/main.js"></script>
+		<script src="{{asset('assets/js/jquery-3.5.1.min.js')}}"></script>
+		<script src="{{asset('assets/js/plugins.js')}}"></script>
+		<script src="{{asset('assets/js/main.js')}}"></script>
 	  </body>
 </html>

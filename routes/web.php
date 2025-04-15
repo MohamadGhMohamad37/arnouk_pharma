@@ -15,6 +15,13 @@ use App\Http\Controllers\Website\StatckController;
 require __DIR__.'/auth/auth.php';
 require __DIR__.'/admin/admin.php';
 
-Route::middleware(['setLocale'])->group(function () {
-    Route::get('{lang}/', [StatckController::class,'index'])->name('home.page');
+Route::group([
+    'prefix' => '{lang}',
+    'where' => ['lang' => 'en|ar'],
+    'middleware' => ['setLocale'],
+],function(){
+    Route::get('/', [StatckController::class,'index'])->name('home.page');
+    Route::prefix('arnoukpharma')->group(function (){
+        Route::get('/about', [StatckController::class,'arnoukPharma_about'])->name('about.arnoukPharma.page');
+    });
 });
