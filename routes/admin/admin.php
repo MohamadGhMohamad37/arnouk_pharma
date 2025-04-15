@@ -2,6 +2,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardConroller;
 use App\Http\Controllers\Admin\AboutUsArnoukPharmaController;
+use App\Http\Controllers\Admin\ServiceArnoukPharmaController;
 
 Route::group([
     'prefix' => '{lang}/admin',
@@ -12,6 +13,7 @@ Route::get('/dashboard',[DashboardConroller::class,'index'])->name('admin.dashbo
 
 Route::prefix('arnoukpharma')->group(function () {
     Route::resource('about', AboutUsArnoukPharmaController::class);
+    Route::resource('service', ServiceArnoukPharmaController::class);
 });
 
 });

@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\ServiceArnoukPharma;
 use Illuminate\Http\Request;
 
-class ServiceArnoukPharmaController extends Controller
+class a extends Controller
 {
     public function index($lang)
     {
@@ -15,12 +15,12 @@ class ServiceArnoukPharmaController extends Controller
             $item->description = $item["description_{$lang}"];
             return $item;
         });
-        return view('services.index', compact('services'));
+        return view('admin.arnouk_pharma.servies.index', compact('services'));
     }
 
     public function create($lang)
     {
-        return view('services.create', compact('lang'));
+        return view('admin.arnouk_pharma.servies.create', compact('lang'));
     }
 
     public function store($lang, Request $request)
@@ -64,7 +64,7 @@ class ServiceArnoukPharmaController extends Controller
 
     public function edit($lang, ServiceArnoukPharma $service)
     {
-        return view('services.edit', compact('service', 'lang'));
+        return view('admin.arnouk_pharma.servies.edit', compact('service', 'lang'));
     }
 
     public function update($lang, Request $request, ServiceArnoukPharma $service)
