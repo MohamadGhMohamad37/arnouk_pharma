@@ -17,6 +17,10 @@ class ServiceArnoukPharmaController extends Controller
         });
         return view('admin.arnouk_pharma.service.index', compact('services'));
     }
+    public function show($lang,ServiceArnoukPharma $service)
+    {
+        return view('admin.arnouk_pharma.service.show', compact('service'));
+    }
 
     public function create($lang)
     {
