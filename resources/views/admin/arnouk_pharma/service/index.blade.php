@@ -49,13 +49,13 @@
                                     <div class="card">
                                         <div class="card-body">
                                             <div class="d-flex justify-content-between align-items-center mb-3">
-                                                <h4 class="header-title">About Arnouk Pharma</h4>
-                                                <a href="{{ route('about.create', ['lang' => app()->getLocale()]) }}" class="btn btn-success">
+                                                <h4 class="header-title">service Arnouk Pharma</h4>
+                                                <a href="{{ route('service.create', ['lang' => app()->getLocale()]) }}" class="btn btn-success">
                                                     + Create
                                                 </a>
                                             </div>
 
-                                            <h4 class="header-title">About Arnouk Pharma</h4>
+                                            <h4 class="header-title">service Arnouk Pharma</h4>
             
                                             <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                                 <thead>

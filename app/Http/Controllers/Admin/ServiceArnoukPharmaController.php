@@ -59,7 +59,7 @@ class ServiceArnoukPharmaController extends Controller
 
         ServiceArnoukPharma::create($data);
 
-        return redirect()->route('services.index', $lang)->with('success', 'Created successfully');
+        return redirect()->route('service.index', ['lang' => app()->getLocale()])->with('success', 'Created successfully');
     }
 
     public function edit($lang, ServiceArnoukPharma $service)
@@ -116,7 +116,7 @@ class ServiceArnoukPharmaController extends Controller
 
         $service->update($data);
 
-        return redirect()->route('services.index', $lang)->with('success', 'Updated successfully');
+        return redirect()->route('service.index', ['lang' => app()->getLocale()])->with('success', 'Updated successfully');
     }
 
     public function destroy($lang, ServiceArnoukPharma $service)
@@ -137,6 +137,6 @@ class ServiceArnoukPharmaController extends Controller
 
         $service->delete();
 
-        return redirect()->route('services.index', $lang)->with('success', 'Deleted successfully');
+        return redirect()->route('service.index', ['lang' => app()->getLocale()])->with('success', 'Deleted successfully');
     }
 }
