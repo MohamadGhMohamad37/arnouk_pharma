@@ -22,4 +22,9 @@ class CategoryArnoukPharma extends Model
     protected $casts = [
         'gallery_images' => 'array', // لتحويل JSON إلى مصفوفة
     ];
+    public function products()
+{
+    return $this->hasMany(ProductArnoukPharma::class);
+}
+
 }
