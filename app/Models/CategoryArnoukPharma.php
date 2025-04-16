@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class CategoryArnoukPharma extends Model
 {
     use HasFactory;
+    protected $table = 'category_arnouk_pharma';
 
     protected $fillable = [
         'name_en',
@@ -21,4 +22,9 @@ class CategoryArnoukPharma extends Model
     protected $casts = [
         'gallery_images' => 'array', // لتحويل JSON إلى مصفوفة
     ];
+    public function products()
+{
+    return $this->hasMany(ProductArnoukPharma::class);
+}
+
 }
