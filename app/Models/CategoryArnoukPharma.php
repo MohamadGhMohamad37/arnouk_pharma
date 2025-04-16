@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class CategoryArnoukPharma extends Model
 {
     use HasFactory;
+    protected $table = 'category_arnouk_pharma';
 
     protected $fillable = [
         'name_en',
