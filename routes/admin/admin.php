@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\DashboardConroller;
 use App\Http\Controllers\Admin\AboutUsArnoukPharmaController;
 use App\Http\Controllers\Admin\ServiceArnoukPharmaController;
 use App\Http\Controllers\Admin\CategoryArnoukPharmaController;
+use App\Http\Controllers\Admin\ProductArnoukPharmaController;
 
 Route::group([
     'prefix' => '{lang}/admin',
@@ -16,6 +17,7 @@ Route::prefix('arnoukpharma')->group(function () {
     Route::resource('about', AboutUsArnoukPharmaController::class);
     Route::resource('service', ServiceArnoukPharmaController::class);
     Route::resource('category_arnouk_pharma', CategoryArnoukPharmaController::class);
+    Route::resource('products_arnouk_pharma', ProductArnoukPharmaController::class);
 
 });
 
