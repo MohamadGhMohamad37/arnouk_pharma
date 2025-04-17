@@ -4117,10 +4117,12 @@ input[type=radio] {
 }
 
 .video-banner {
+  max-height: 87%;
   position: relative;
   z-index: 2;
 }
 .video-banner img {
+  max-height: 103%;
   width: 100%;
   border-radius: 15px;
 }
