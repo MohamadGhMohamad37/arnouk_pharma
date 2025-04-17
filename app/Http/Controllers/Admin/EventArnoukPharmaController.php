@@ -53,9 +53,12 @@ if ($request->hasFile('gallery_images')) {
     foreach ($request->file('gallery_images') as $image) {
         $ext = $image->getClientOriginalExtension();
         $name = time() . '_' . uniqid() . '.' . $ext;
-        $path = public_path('storegs/arnouk_pharma/event_gallery/image/images');
+        $path = public_path('storages/arnouk_pharma/event_gallery/image/images');
         $image->move($path, $name);
-        $gallery[] = "storegs/arnouk_pharma/event_gallery/image/images/" . $name;
+
+
+
+        $gallery[] = "storages/arnouk_pharma/event_gallery/image/images/" . $name;
     }
     $data['gallery_images'] = json_encode($gallery);
 
@@ -115,9 +118,9 @@ public function update($lang,Request $request, EventArnoukPharma $event_arnouk_p
             foreach ($request->file('gallery_images') as $image) {
                 $ext = $image->getClientOriginalExtension();
                 $name = time() . '_' . uniqid() . '.' . $ext;
-                $path = public_path('storegs/arnouk_pharma/event_gallery/image/images');
+                $path = public_path('storages/arnouk_pharma/event_gallery/image/images');
                 $image->move($path, $name);
-                $imagesPath[] = "storegs/arnouk_pharma/event_gallery/image/images/" . $name;
+                $imagesPath[] = "storages/arnouk_pharma/event_gallery/image/images/" . $name;
             }
             $data['gallery_images'] = json_encode($imagesPath);
         }
@@ -125,7 +128,6 @@ public function update($lang,Request $request, EventArnoukPharma $event_arnouk_p
     $event_arnouk_pharma->update($data);
     return redirect()->route('event_arnouk_pharma.index', ['lang' => app()->getLocale()])->with('success', 'Event updated!');
 }
-
 public function destroy($lang,EventArnoukPharma $event_arnouk_pharma)
 {
     
