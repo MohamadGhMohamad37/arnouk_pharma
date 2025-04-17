@@ -1,5 +1,5 @@
 @extends('website.layouts.app')
-@section('title','About')
+@section('title','Pharmacy About')
 @section('content')
 
 <!DOCTYPE html>

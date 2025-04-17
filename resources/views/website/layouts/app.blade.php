@@ -72,7 +72,7 @@
 						  <a href="{{ route('about.arnoukPharma.page', ['lang' => app()->getLocale()]) }}" class="nav__item-link">{{ __('messages.about') }}</a>
 						</li><!-- /.nav-item -->
 						<li class="nav__item">
-						  <a href="" class="nav__item-link">{{ __('messages.serviec') }}</a>
+						  <a href="{{ route('services.arnoukPharma.page', ['lang' => app()->getLocale()]) }}" class="nav__item-link">{{ __('messages.serviec') }}</a>
 						</li><!-- /.nav-item -->
 						<li class="nav__item">
 						  <a href="" class="nav__item-link">{{ __('messages.product') }}</a>

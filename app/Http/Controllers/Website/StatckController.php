@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Website;
 
 use App\Http\Controllers\Controller;
 use App\Models\AboutUsArnoukPharma;
+use App\Models\ServiceArnoukPharma;
 use Illuminate\Http\Request;
 
 class StatckController extends Controller
@@ -14,6 +15,10 @@ class StatckController extends Controller
 
     public function arnoukPharma_about($lang){
         $about = AboutUsArnoukPharma::first();
-        return view('website.arnouk_pharma.about.index', compact('about','lang'));
+        return view('website.arnouk_pharma.about.about', compact('about','lang'));
+    }
+    public function arnoukPharma_services($lang){
+        $services = ServiceArnoukPharma::all();
+        return view('website.arnouk_pharma.service.service', compact('services','lang'));
     }
 }

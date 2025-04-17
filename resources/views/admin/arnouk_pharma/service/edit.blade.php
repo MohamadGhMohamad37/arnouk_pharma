@@ -77,12 +77,12 @@
 
                             <div class="form-group mb-3">
                                 <label class="mb-2">Description English</label>
-                                <textarea class="form-control" name="description_en">{{ old('description_en', $service->description_en) }}</textarea>
+                                <textarea id="disc_en" class="form-control" name="description_en">{{ old('description_en', $service->description_en) }}</textarea>
                             </div>
 
                             <div class="form-group mb-3">
                                 <label class="mb-2">Description Arabic</label>
-                                <textarea class="form-control" name="description_ar">{{ old('description_ar', $service->description_ar) }}</textarea>
+                                <textarea id="disc_ar" class="form-control" name="description_ar">{{ old('description_ar', $service->description_ar) }}</textarea>
                             </div>
 
                             <div class="form-group mb-3">

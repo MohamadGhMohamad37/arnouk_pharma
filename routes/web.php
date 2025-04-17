@@ -23,5 +23,6 @@ Route::group([
     Route::get('/', [StatckController::class,'index'])->name('home.page');
     Route::prefix('arnoukpharma')->group(function (){
         Route::get('/about', [StatckController::class,'arnoukPharma_about'])->name('about.arnoukPharma.page');
+        Route::get('/services', [StatckController::class,'arnoukPharma_services'])->name('services.arnoukPharma.page');
     });
 });
