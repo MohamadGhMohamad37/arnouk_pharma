@@ -165,7 +165,7 @@ class ProductArnoukPharmaController extends Controller
                     if (file_exists(public_path($oldImage))) {
                         unlink(public_path($oldImage));
                     }
-                }
+                }              
             }
 
             foreach ($request->file('images') as $image) {

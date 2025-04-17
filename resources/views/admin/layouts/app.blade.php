@@ -180,11 +180,11 @@
                                     <li><a href="{{ route('about.index', ['lang' => app()->getLocale()]) }}">{{ __('admin.about') }}</a></li>
                                     <li><a href="{{ route('service.index', ['lang' => app()->getLocale()]) }}">{{ __('admin.serviec') }}</a></li>
                                     <li><a href="{{ route('category_arnouk_pharma.index', ['lang' => app()->getLocale()]) }}">{{ __('admin.category') }}</a></li>
-                                    <li><a href="email-compose.html">{{ __('admin.product') }}</a></li>
-                                    <li><a href="email-compose.html">{{ __('admin.event') }}</a></li>
-                                    <li><a href="email-compose.html">{{ __('admin.blog') }}</a></li>
-                                    <li><a href="email-compose.html">{{ __('admin.contact_us') }}</a></li>
-                                    <li><a href="email-compose.html">{{ __('admin.job') }}</a></li>
+                                    <li><a href="{{ route('products_arnouk_pharma.index', ['lang' => app()->getLocale()]) }}">{{ __('admin.product') }}</a></li>
+                                    <li><a href="">{{ __('admin.event') }}</a></li>
+                                    <li><a href="">{{ __('admin.blog') }}</a></li>
+                                    <li><a href="">{{ __('admin.contact_us') }}</a></li>
+                                    <li><a href="">{{ __('admin.job') }}</a></li>
                                 </ul>
                             </li>
                                 <!-- Arnouk Pharma for pharmceutical Distribution -->
