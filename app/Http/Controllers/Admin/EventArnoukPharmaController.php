@@ -129,7 +129,7 @@ public function update($lang,Request $request, EventArnoukPharma $event_arnouk_p
     return redirect()->route('event_arnouk_pharma.index', ['lang' => app()->getLocale()])->with('success', 'Event updated!');
 }
 public function show($lang,EventArnoukPharma $event_arnouk_pharma){
-    return view('admin.arnouk_pharma.about.show',compact('event_arnouk_pharma'));
+    return view('admin.arnouk_pharma.event.show',compact('event_arnouk_pharma'));
 }
 
 public function destroy($lang,EventArnoukPharma $event_arnouk_pharma)
